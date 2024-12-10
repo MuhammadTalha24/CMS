@@ -1,0 +1,16 @@
+export const colors = {
+	black: '#000',
+	white: '#fff',
+	borderColor: '#DEE9E9',
+	deepBorder: '#595959',
+	productTextColor: '#868e96',
+	hoverColor: '#F6F7F9',
+	hoverBgColor: '#E4E5E5',
+	buttonBg: '#2E2E2E',
+	buttonHover: '#292929',
+	lightWhite: '#999EA6',
+	textColor: '#25262B',
+	danger: '#CC282F',
+	disableBtn: '#969696',
+	textBlack: '#202026',
+};
