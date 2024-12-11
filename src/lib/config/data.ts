@@ -350,6 +350,18 @@ export const data = {
 			},
 		],
 	},
+	consultingSlider: {
+		title: 'Consulting',
+		description:
+			'Our consulting services empower organizations to harness the full potential of their IT investments. We combine industry best practices with cutting-edge technologies to deliver solutions tailored to each customer’s unique challenges and opportunities. This ensures sustainable growth, operational excellence, and a competitive edge in a rapidly evolving digital landscape.',
+		slider: [
+			{
+				title: 'IT Strategy & Planning',
+				shortDescription: '',
+			},
+		],
+	},
+
 	footer: {
 		columnLinks: [
 			{
