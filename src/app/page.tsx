@@ -1,10 +1,13 @@
 'use client';
 import {
 	IconSection,
-	IndustrySection,
+	MissionVision,
+	LeadershipSection,
 	PageLayout,
 	SectionPadding,
 	SliderWithContent,
+	ValueTogether,
+	ServiceSection,
 } from '@/components';
 import { useColors } from '@/hooks';
 import { data } from '@/lib/config/data';
@@ -19,13 +22,25 @@ const Page = () => {
 				<IconSection data={aboutSection} />
 			</SectionPadding>
 			<SectionPadding py={'3rem'} bg={colors?.black}>
-				<IconSection order data={leadershipSection} />
+				<LeadershipSection order data={leadershipSection} />
+			</SectionPadding>
+			<SectionPadding
+				py={'3rem'}
+				bg={colors?.black}
+				borderBottom={`1px solid ${colors?.primary}`}
+			>
+				<MissionVision />
 			</SectionPadding>
 			<SectionPadding py={'3rem'} bg={colors?.black}>
-				<IndustrySection />
+				<ValueTogether />
+			</SectionPadding>
+			<SectionPadding py={'3rem'} bg={colors?.black}>
+				<ServiceSection />
 			</SectionPadding>
 			{/* <SectionPadding py={'3rem'} bg={colors?.black}>
-				<IndustrySection />
+				<Box> 
+					<Heading></Heading>
+				</Box>
 			</SectionPadding> */}
 		</PageLayout>
 	);

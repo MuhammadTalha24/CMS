@@ -97,11 +97,11 @@ type SliderData = {
 	four: SliderItem;
 };
 
-type SliderWithContentProps = {
+type ConsultingSliderProps = {
 	sliderData: SliderData;
 };
 
-const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
+const ConsultingSlider: FC<ConsultingSliderProps> = ({ sliderData }) => {
 	const { colors } = useColors();
 	const valuesMap = Object.values(sliderData);
 
@@ -214,4 +214,4 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 	);
 };
 
-export default SliderWithContent;
+export default ConsultingSlider;

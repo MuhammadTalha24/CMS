@@ -17,7 +17,7 @@ const style = {
 
 // }
 
-const IndustrySection = () => {
+const MissionVision = () => {
 	const { industrySection } = data;
 	const { colors } = useColors();
 	return (
@@ -29,7 +29,7 @@ const IndustrySection = () => {
 						<Link key={i} href={item?.link} style={style}>
 							<NormalText
 								color={colors?.textBlack}
-								fontSize={{ base: '1rem', lg: '1.4rem' }}
+								fontSize={'1rem'}
 								transition='.3s'
 								display='inline-block'
 								_hover={{
@@ -56,4 +56,4 @@ const IndustrySection = () => {
 	);
 };
 
-export default IndustrySection;
+export default MissionVision;
