@@ -26,7 +26,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({}) => {
 	};
 	return (
 		<Box>
-			<Heading fontSize='1.75rem' fontWeight='700' pb='2rem' mb='1rem'>
+			<Heading fontSize='3rem' fontWeight='700' pb='2rem' mb='1rem'>
 				{serviceSection?.title}
 			</Heading>
 			<Grid gridTemplateColumns='repeat(4, 1fr)' gap={6}>
