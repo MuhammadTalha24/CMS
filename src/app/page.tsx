@@ -9,9 +9,20 @@ import {
 	ValueTogether,
 	ServiceSection,
 	ConsultingSection,
+	IndustriesFaq,
+	CareerSection,
+	PartnerSection,
 } from '@/components';
 import { useColors } from '@/hooks';
 import { data } from '@/lib/config/data';
+
+const style = {
+	background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/career/one.jpg")`,
+	backgroundPosition: 'center center',
+	backgroundRepeat: 'no-repeat',
+	backgroundSize: 'cover',
+	minHeight: 'auto',
+};
 
 const Page = () => {
 	const { colors } = useColors();
@@ -38,8 +49,16 @@ const Page = () => {
 			<SectionPadding py={'3rem'} bg={colors?.black}>
 				<ServiceSection />
 			</SectionPadding>
-
 			<ConsultingSection />
+			<SectionPadding py={'3rem'} bg={colors?.black}>
+				<IndustriesFaq />
+			</SectionPadding>
+			<SectionPadding py={'6rem'} style={style}>
+				<CareerSection />
+			</SectionPadding>
+			<SectionPadding py={'3rem'}>
+				<PartnerSection />
+			</SectionPadding>
 		</PageLayout>
 	);
 };
