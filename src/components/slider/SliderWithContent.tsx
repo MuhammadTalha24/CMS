@@ -4,7 +4,7 @@ import { Heading, NormalText, Overlay } from '@/components';
 import { useColors } from '@/hooks';
 import { zIndex } from '@/lib/config/constants';
 // import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
-import { Box, IconButton, Image } from '@chakra-ui/react'; // If you're using Chakra UI
+import { Box, Image } from '@chakra-ui/react'; // If you're using Chakra UI
 import { FC } from 'react';
 import SlickSlider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
@@ -29,60 +29,60 @@ import 'slick-carousel/slick/slick.css';
 // };
 
 // Custom Previous Button
-const PreviousButton = ({ onClick }: { onClick?: () => void }) => {
-	return (
-		<IconButton
-			aria-label='Previous'
-			// icon={<ArrowBackIcon />}
-			position='absolute'
-			left={{ base: '20px', sm: '50px', md: '150px', lg: '200px', xl: '245px' }}
-			top='50%'
-			transform='translateY(-50%)'
-			zIndex='10'
-			bg='rgba(0, 0, 0, 0.5)'
-			color='white'
-			borderRadius='full'
-			onClick={onClick}
-			_hover={{ bg: 'rgba(0, 0, 0, 0.8)' }}
-			p={{ base: '18px', sm: '8px', md: '12px' }}
-			size={{
-				base: 'sm', // Adjust size for small screens
-				sm: 'lg',
-			}}
-		/>
-	);
-};
+// const PreviousButton = ({ onClick }: { onClick?: () => void }) => {
+// 	return (
+// 		<IconButton
+// 			aria-label='Previous'
+// 			// icon={<ArrowBackIcon />}
+// 			position='absolute'
+// 			left={{ base: '20px', sm: '50px', md: '150px', lg: '200px', xl: '245px' }}
+// 			top='50%'
+// 			transform='translateY(-50%)'
+// 			zIndex='10'
+// 			bg='rgba(0, 0, 0, 0.5)'
+// 			color='white'
+// 			borderRadius='full'
+// 			onClick={onClick}
+// 			_hover={{ bg: 'rgba(0, 0, 0, 0.8)' }}
+// 			p={{ base: '18px', sm: '8px', md: '12px' }}
+// 			size={{
+// 				base: 'sm', // Adjust size for small screens
+// 				sm: 'lg',
+// 			}}
+// 		/>
+// 	);
+// };
 
 // Custom Next Button
-const NextButton = ({ onClick }: { onClick?: () => void }) => {
-	return (
-		<IconButton
-			aria-label='Next'
-			// icon={<Icon name='search' />}
-			position='absolute'
-			right={{
-				base: '20px',
-				sm: '50px',
-				md: '150px',
-				lg: '200px',
-				xl: '245px',
-			}}
-			top='50%'
-			transform='translateY(-50%)'
-			zIndex='10'
-			bg='rgba(0, 0, 0, 0.5)'
-			color='white'
-			borderRadius='full'
-			onClick={onClick}
-			_hover={{ bg: 'rgba(0, 0, 0, 0.8)' }}
-			p={{ base: '18px', sm: '8px', md: '12px' }}
-			size={{
-				base: 'sm', // Adjust size for small screens
-				sm: 'lg',
-			}}
-		/>
-	);
-};
+// const NextButton = ({ onClick }: { onClick?: () => void }) => {
+// 	return (
+// 		<IconButton
+// 			aria-label='Next'
+// 			// icon={<Icon name='search' />}
+// 			position='absolute'
+// 			right={{
+// 				base: '20px',
+// 				sm: '50px',
+// 				md: '150px',
+// 				lg: '200px',
+// 				xl: '245px',
+// 			}}
+// 			top='50%'
+// 			transform='translateY(-50%)'
+// 			zIndex='10'
+// 			bg='rgba(0, 0, 0, 0.5)'
+// 			color='white'
+// 			borderRadius='full'
+// 			onClick={onClick}
+// 			_hover={{ bg: 'rgba(0, 0, 0, 0.8)' }}
+// 			p={{ base: '18px', sm: '8px', md: '12px' }}
+// 			size={{
+// 				base: 'sm', // Adjust size for small screens
+// 				sm: 'lg',
+// 			}}
+// 		/>
+// 	);
+// };
 
 type SliderItem = {
 	heading: string;
@@ -108,14 +108,14 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 	const settings = {
 		centerMode: true,
 		centerPadding: '300px',
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		pauseOnHover: true,
 		slidesToShow: 1,
 		infinite: true,
 		speed: 1500,
-		prevArrow: <PreviousButton />,
-		nextArrow: <NextButton />,
+		// prevArrow: <PreviousButton />,
+		// nextArrow: <Icon name='arrow' />,
 		responsive: [
 			{
 				breakpoint: 1536,

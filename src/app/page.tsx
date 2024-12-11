@@ -11,6 +11,7 @@ import {
 } from '@/components';
 import { useColors } from '@/hooks';
 import { data } from '@/lib/config/data';
+import { Box, Heading } from '@chakra-ui/react';
 
 const Page = () => {
 	const { colors } = useColors();
@@ -37,11 +38,11 @@ const Page = () => {
 			<SectionPadding py={'3rem'} bg={colors?.black}>
 				<ServiceSection />
 			</SectionPadding>
-			{/* <SectionPadding py={'3rem'} bg={colors?.black}>
-				<Box> 
+			<SectionPadding py={'3rem'} bg={colors?.black}>
+				<Box>
 					<Heading></Heading>
 				</Box>
-			</SectionPadding> */}
+			</SectionPadding>
 		</PageLayout>
 	);
 };
