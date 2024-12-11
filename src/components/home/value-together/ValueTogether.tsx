@@ -11,7 +11,12 @@ const ValueTogether: FC<ValueTogetherProps> = ({}) => {
 	const { valueTogether } = data;
 	return (
 		<Box>
-			<Heading fontSize='3rem' fontWeight='700' pb='2rem' whiteSpace='pre-line'>
+			<Heading
+				fontSize='1.75rem'
+				fontWeight='700'
+				pb='2rem'
+				whiteSpace='pre-line'
+			>
 				{valueTogether?.title}
 			</Heading>
 			<Flex justifyContent='space-between'>

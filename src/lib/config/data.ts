@@ -423,6 +423,9 @@ export const data = {
 			},
 		},
 	},
+	// industries: [
+	// 	title: ""
+	// ],
 
 	footer: {
 		columnLinks: [
