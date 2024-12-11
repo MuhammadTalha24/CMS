@@ -85,23 +85,25 @@ import 'slick-carousel/slick/slick.css';
 // };
 
 type SliderItem = {
-	heading: string;
-	text?: string;
+	title: string;
+	shortDescription?: string;
+	textList?: string[];
 	image: string;
-	textlist?: string[];
 };
 type SliderData = {
 	one: SliderItem;
 	two: SliderItem;
 	three: SliderItem;
 	four: SliderItem;
+	five: SliderItem;
+	six: SliderItem;
 };
 
-type SliderWithContentProps = {
+type ConsultingSliderProps = {
 	sliderData: SliderData;
 };
 
-const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
+const ConsultingSlider: FC<ConsultingSliderProps> = ({ sliderData }) => {
 	const { colors } = useColors();
 	const valuesMap = Object.values(sliderData);
 
@@ -115,7 +117,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 		infinite: true,
 		speed: 1500,
 		// prevArrow: <PreviousButton />,
-		// nextArrow: <Icon name='arrow' />,
+		// nextArrow: <NextButton />,
 		responsive: [
 			{
 				breakpoint: 1536,
@@ -160,7 +162,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 			<SlickSlider {...settings}>
 				{valuesMap.map((item, index) => (
 					<Box key={index} px='20px' overflow='hidden'>
-						<Box position={item?.heading && 'relative'} h='80vh'>
+						<Box position={item?.title && 'relative'} h='80vh'>
 							<Image
 								src={item?.image}
 								alt={`slide-${index}`}
@@ -171,9 +173,9 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 								h='full'
 							/>
 							{/* {item.heading && <Overlay />} */}
-							{item?.heading && <Overlay />}
+							{item?.title && <Overlay />}
 
-							{item?.heading && (
+							{item?.title && (
 								<Box
 									zIndex={zIndex?.hero}
 									position='absolute'
@@ -188,19 +190,15 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 										color={colors?.white}
 										textAlign={'center'}
 									>
-										{item?.heading}
+										{item?.title}
 									</Heading>
-									{item?.text && (
+									{item?.shortDescription && (
 										<NormalText fontSize='1.5rem' textAlign={'center'}>
-											{item?.text}
+											{item?.shortDescription}
 										</NormalText>
 									)}
-									{item?.textlist?.map((item: any, i: number) => (
-										<NormalText
-											key={i}
-											fontSize={{ base: '1.5rem', lg: '1.5rem' }}
-											color={colors?.white}
-										>
+									{item?.textList?.map((item: any, i: number) => (
+										<NormalText key={i} fontSize='1rem' color={colors?.white}>
 											{`• ${item}`}
 										</NormalText>
 									))}
@@ -214,4 +212,4 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 	);
 };
 
-export default SliderWithContent;
+export default ConsultingSlider;

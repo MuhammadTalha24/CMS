@@ -7,7 +7,13 @@ type FLexImageProps = FlexProps & {
 const FLexImage: FC<FLexImageProps> = ({ image, ...props }) => {
 	return (
 		<Flex maxW='full' h='auto' {...props}>
-			<Image w='full' h='auto' src={image} alt='Logo Image' />
+			<Image
+				w='full'
+				h='auto'
+				objectFit='contain'
+				src={image}
+				alt='Logo Image'
+			/>
 		</Flex>
 	);
 };
