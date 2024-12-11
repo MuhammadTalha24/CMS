@@ -423,9 +423,71 @@ export const data = {
 			},
 		},
 	},
-	// industries: [
-	// 	title: ""
-	// ],
+	industries: {
+		title: 'Industries',
+		data: [
+			{
+				title: 'Banking & Non-Banking Financial Institutions (NBFIs)',
+				description:
+					'Our services for the Banking and NBFI sector are designed to enhance operational efficiency, ensure regulatory compliance, and drive digital innovation. We offer solutions including digital banking transformation, risk management, and customer experience enhancement, enabling financial institutions to stay competitive in a rapidly evolving market.',
+			},
+			{
+				title: 'Telecommunications',
+				description:
+					'In the Telecommunications industry, we provide services aimed at network optimization, customer engagement, and the adoption of emerging technologies. Our offerings include intelligent network solutions, IoT integration, and data analytics, helping telecom companies deliver superior services and adapt to changing consumer demands.',
+			},
+			{
+				title: 'Government',
+				description:
+					'For Government entities, we offer solutions that promote digital transformation, enhance public services, and improve operational efficiency. Our services encompass e-governance platforms, cybersecurity assurance, and data analytics, supporting governments in delivering transparent and efficient services to citizens.',
+			},
+			{
+				title: 'Health & Pharmaceuticals',
+				description:
+					'In the Health and Pharmaceuticals sector, our services focus on digital health solutions, regulatory compliance, and research and development support. We provide AI/ML solutions, data analytics, and cybersecurity services, enabling healthcare providers and pharmaceutical companies to innovate and improve patient outcomes.',
+			},
+			{
+				title: 'Medium and Large Enterprises',
+				description:
+					'For Medium and Large Enterprises across various industries, we offer a comprehensive suite of services including digital transformation, infrastructure solutions, and managed services. Our goal is to drive operational excellence, foster innovation, and support sustainable growth, ensuring businesses remain agile and competitive in the global market.',
+			},
+		],
+	},
+	career: {
+		title: 'Career',
+		image: '/career/one.jpg',
+		textList: [
+			'At Tech Novelty Limited, we believe our people are the foundation of our success. We are committed to creating a vibrant workplace where innovation thrives, talent is nurtured, and every team member is empowered to reach their full potential.',
+			'Joining our team means working alongside industry leaders on cutting-edge technologies in fields like AI, cybersecurity, IoT, and digital transformation. We offer a collaborative environment that fosters creativity, continuous learning, and professional growth.',
+			"Whether you're an experienced professional or just starting your career, Tech Novelty provides opportunities to make an impact, solve challenging problems, and contribute to shaping the future of IT.",
+			'Come be a part of a company that values excellence, integrity, and sustainability. Together, we’ll drive innovation and build solutions that make a difference.',
+			'Explore opportunities with us and take the next step in your career journey. Please send your CVs to career@technoveltysolutions.com.',
+		],
+	},
+
+	partnersSection: {
+		title: 'Partners & Alliances',
+		description:
+			'At Tech Novelty Limited, we believe in the power of collaboration. By working with leading global technology providers and industry experts, we deliver cutting-edge solutions that meet the evolving needs of our clients. Our strategic partnerships enable us to bring the best-of-breed technologies and services to our customers, ensuring they stay ahead in a competitive landscape.',
+		shortHeading: 'Our Key Partners & Alliances Include',
+		firstColumn: {
+			title: 'Technology Providers',
+			text: 'We collaborate with top-tier technology vendors in cloud computing, cybersecurity, AI, data analytics, and more, ensuring that our solutions are always at the forefront of innovation.',
+		},
+		secondColumn: {
+			image: '/partners/one.jpg',
+		},
+		thirdTwoColumn: [
+			{
+				title: 'OEM Partners',
+				text: 'Our Original Equipment Manufacturer (OEM) partnerships help us deliver world-class infrastructure, hardware, and software solutions tailored to your business needs.',
+			},
+			{
+				title: 'Consulting & Industry Alliances:',
+				text: 'We align with leading consultancy firms and industry groups to offer comprehensive services that optimize business processes and drive digital transformation.',
+			},
+		],
+	},
 
 	footer: {
 		columnLinks: [
@@ -486,17 +548,17 @@ export const data = {
 			{
 				iconName: 'facebook',
 				color: '#fff',
-				link: 'wwww.facebook.com',
+				link: '/wwww.facebook.com',
 			},
 			{
 				iconName: 'linkedin',
 				color: '#fff',
-				link: 'wwww.linkedin.com',
+				link: '/wwww.linkedin.com',
 			},
 			{
 				iconName: 'twitter',
 				color: '#fff',
-				link: 'wwww.twitter.com',
+				link: '/wwww.twitter.com',
 			},
 		],
 		copyrightText: '© thinkcrypt.io All right reserved.',
