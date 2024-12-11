@@ -2,6 +2,7 @@
 'use client';
 import { Heading, NormalText, Overlay } from '@/components';
 import { useColors } from '@/hooks';
+import { zIndex } from '@/lib/config/constants';
 // import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import { Box, IconButton, Image } from '@chakra-ui/react'; // If you're using Chakra UI
 import { FC } from 'react';
@@ -84,7 +85,8 @@ const NextButton = ({ onClick }: { onClick?: () => void }) => {
 };
 
 type SliderItem = {
-	text: string;
+	heading: string;
+	text?: string;
 	image: string;
 	textlist?: string[];
 };
@@ -106,7 +108,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 	const settings = {
 		centerMode: true,
 		centerPadding: '300px',
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 3000,
 		pauseOnHover: true,
 		slidesToShow: 1,
@@ -158,7 +160,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 			<SlickSlider {...settings}>
 				{valuesMap.map((item, index) => (
 					<Box key={index} px='20px' overflow='hidden'>
-						<Box position={item?.text && 'relative'} h='80vh'>
+						<Box position={item?.heading && 'relative'} h='80vh'>
 							<Image
 								src={item?.image}
 								alt={`slide-${index}`}
@@ -169,16 +171,27 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 								h='full'
 							/>
 							{/* {item.heading && <Overlay />} */}
-							{item?.text && <Overlay />}
+							{item?.heading && <Overlay />}
 
-							{item?.text && (
-								<Box zIndex={'888'} position='absolute' top='1rem' left='2rem'>
+							{item?.heading && (
+								<Box
+									zIndex={zIndex?.hero}
+									position='absolute'
+									w='auto'
+									top='50%'
+									left='50%'
+									transform={'translate(-50%, -50%)'}
+								>
 									<Heading
 										fontSize={{ base: '1.5rem', lg: '1.5rem' }}
 										color={colors?.white}
+										textAlign={'center'}
 									>
-										{item?.text}
+										{item?.heading}
 									</Heading>
+									{item?.text && (
+										<NormalText textAlign={'center'}>{item?.text}</NormalText>
+									)}
 									{item?.textlist?.map((item: any, i: number) => (
 										<NormalText
 											key={i}

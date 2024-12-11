@@ -44,3 +44,8 @@ export const checkoutPageWidth = '680px';
 export const cartDisplayButtonWidth = '560px';
 
 export const placeholderImage = '/product/placeholderImage.jpg';
+
+export const zIndex = {
+	headerDropdown: '222',
+	hero: '111',
+};
