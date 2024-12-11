@@ -161,11 +161,13 @@ export const data = {
 
 	hero: {
 		one: {
-			text: 'AI/ML: custom model development, data analysis, and preparation, model training and deployment, predictive analytics, natural language processing (NLP), computer vision, chatbot development, recommendation systems, sentiment analysis, data visualization, and consulting services to help businesses identify and implement suitable AI/ML solutions across various industries, all aimed at automating tasks, gaining insights from data, and improving operational efficiency',
+			heading: 'AI/ML',
+			text: 'custom model development, data analysis, and preparation, model training and deployment, predictive analytics, natural language processing (NLP), computer vision, chatbot development, recommendation systems, sentiment analysis, data visualization, and consulting services to help businesses identify and implement suitable AI/ML solutions across various industries, all aimed at automating tasks, gaining insights from data, and improving operational efficiency',
 			image: '/slider/one.jpg',
 		},
 		two: {
-			text: 'Robotics Process Automation: Robotic Process Automation (RPA) services can include:',
+			heading:
+				'Robotics Process Automation: Robotic Process Automation (RPA) services can include',
 			image: '/slider/two.jpg',
 			textlist: [
 				'Consulting: Helps identify opportunities for automation and overcome challenges.',
@@ -177,7 +179,7 @@ export const data = {
 			],
 		},
 		three: {
-			text: 'Some other RPA services include:',
+			heading: 'Some other RPA services include',
 			image: '/slider/three.jpg',
 			textlist: [
 				'RPA-as-a-service',
@@ -191,7 +193,8 @@ export const data = {
 			],
 		},
 		four: {
-			text: 'RPA can help improve the accuracy and security of data, standardize processes, and increase overall output. It can also free up time for employees to focus on more strategic work.',
+			heading: 'RPA',
+			text: 'can help improve the accuracy and security of data, standardize processes, and increase overall output. It can also free up time for employees to focus on more strategic work.',
 			image: '/slider/four.jpg',
 		},
 	},
@@ -263,94 +266,78 @@ export const data = {
 			},
 		],
 	},
-	footer: [
-		{
-			title: 'Preference Center',
-			links: [
-				{
-					text: 'Career',
-					link: '/',
-				},
-				{
-					text: 'About Us',
-					link: '/',
-				},
-				{
-					text: 'Contact Us',
-					link: '/',
-				},
-				{
-					text: 'Locations',
-					link: '/',
-				},
-				{
-					text: 'Sitemap',
-					link: '/',
-				},
-			],
+	footer: {
+		columnLinks: [
+			{
+				title: 'Navigation',
+				links: [
+					{
+						text: 'Home',
+						link: '/',
+					},
+					{
+						text: 'About',
+						link: '/',
+					},
+					{
+						text: 'Products',
+						link: '/',
+					},
+				],
+			},
+			{
+				title: 'Quick Links',
+				links: [
+					{
+						text: 'Services',
+						link: '/',
+					},
+					{
+						text: 'Consulting',
+						link: '/',
+					},
+					{
+						text: 'Industries',
+						link: '/',
+					},
+				],
+			},
+		],
+		footerLinks: [
+			{
+				text: 'Partners & Alliances',
+				link: '/',
+			},
+			{
+				text: 'Careers',
+				link: '/',
+			},
+			{
+				text: 'Contact Us',
+				link: '/',
+			},
+		],
+		followText: {
+			title: 'Follow Us',
+			description: 'Stay updated with our latest news and innovations',
 		},
-		{
-			title: 'Privacy Statement',
-			links: [
-				{
-					text: 'Terms & Condition',
-					link: '/',
-				},
-				{
-					text: 'About Us',
-					link: '/',
-				},
-				{
-					text: 'Contact Us',
-					link: '/',
-				},
-				{
-					text: 'Locations',
-					link: '/',
-				},
-			],
-		},
-		{
-			title: 'Privacy Statement',
-			links: [
-				{
-					text: 'Terms & Condition',
-					link: '/',
-				},
-				{
-					text: 'About Us',
-					link: '/',
-				},
-				{
-					text: 'Contact Us',
-					link: '/',
-				},
-				{
-					text: 'Locations',
-					link: '/',
-				},
-			],
-		},
-		{
-			title: 'Privacy Statement',
-			links: [
-				{
-					text: 'Terms & Condition',
-					link: '/',
-				},
-				{
-					text: 'About Us',
-					link: '/',
-				},
-				{
-					text: 'Contact Us',
-					link: '/',
-				},
-				{
-					text: 'Locations',
-					link: '/',
-				},
-			],
-		},
-	],
+		socialIcons: [
+			{
+				iconName: 'facebook',
+				color: '#fff',
+				link: 'wwww.facebook.com',
+			},
+			{
+				iconName: 'linkedin',
+				color: '#fff',
+				link: 'wwww.linkedin.com',
+			},
+			{
+				iconName: 'twitter',
+				color: '#fff',
+				link: 'wwww.twitter.com',
+			},
+		],
+		copyrightText: '© thinkcrypt.io All right reserved.',
+	},
 };
