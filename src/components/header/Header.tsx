@@ -1,11 +1,10 @@
 'use client';
-import { FlexImage, Icon, SectionPadding } from '@/components';
+import { FlexImage, SectionPadding } from '@/components';
 import { colors } from '@/hooks/useColors';
 import { data } from '@/lib/config/data';
 // import { ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { Heading } from '@/components';
-import { padding, zIndex } from '@/lib/config/constants';
-import { Box, Collapsible, Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 
@@ -47,11 +46,17 @@ const Header: FC<HeaderProps> = () => {
 									px='1rem'
 									_hover={{ color: colors?.textBlack }}
 								>
-									<Heading fontSize='1.3rem' mr='.5rem'>
+									<Heading
+										fontSize='1.3rem'
+										mr='.5rem'
+										color={colors?.white}
+										transition='.3s'
+										_hover={{ color: colors?.white }}
+									>
 										{item.name}
 									</Heading>
 
-									{item.dropdown && (
+									{/* {item.dropdown && (
 										<>
 											{activeDropdown === item.name ? (
 												<Icon color={colors?.white} name='arrowUp' />
@@ -59,9 +64,9 @@ const Header: FC<HeaderProps> = () => {
 												<Icon color={colors?.white} name='arrowDown' />
 											)}
 										</>
-									)}
+									)} */}
 								</Flex>
-								{item.dropdown && (
+								{/* {item.dropdown && (
 									<Collapsible.Root
 										open={activeDropdown === item.name}
 										unmountOnExit
@@ -111,7 +116,7 @@ const Header: FC<HeaderProps> = () => {
 											</Box>
 										</Collapsible.Content>
 									</Collapsible.Root>
-								)}
+								)} */}
 							</Box>
 						))}
 					</Flex>
