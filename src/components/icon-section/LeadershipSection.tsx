@@ -3,12 +3,16 @@ import { Grid, GridProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 import { FlexColumn, FlexImage, Heading, NormalText } from '@/components';
 
-type IconSectionProps = GridProps & {
+type LeadershipSectionProps = GridProps & {
 	data: any;
 	order?: boolean;
 };
 
-const IconSection: FC<IconSectionProps> = ({ data, order, ...props }) => {
+const LeadershipSection: FC<LeadershipSectionProps> = ({
+	data,
+	order,
+	...props
+}) => {
 	return (
 		<Grid templateColumns='1fr 1fr' gap={6} {...props}>
 			<FlexImage order={order ? 2 : 1} image={data?.icon} />
@@ -23,11 +27,11 @@ const IconSection: FC<IconSectionProps> = ({ data, order, ...props }) => {
 	);
 };
 
-export default IconSection;
+export default LeadershipSection;
 
 const TextHeading = ({ children }: { children: string }) => (
 	<Heading
-		fontSize={{ base: '1rem', lg: '3rem' }}
+		fontSize={{ base: '1rem', lg: '1.75rem' }}
 		fontWeight='700'
 		lineHeight='1.2'
 	>

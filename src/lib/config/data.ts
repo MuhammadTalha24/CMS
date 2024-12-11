@@ -200,20 +200,22 @@ export const data = {
 	},
 	aboutSection: {
 		icon: '/icon/icon.png',
-		heading: 'About Tech Novelty Solutions',
-		para: ' Tech Novelty Limited is a forward-thinking IT solutions provider specializing in delivering cutting-edge technologies and tailored services to drive business success. From robust infrastructure solutions and intelligent networks to AI-driven innovations, we empower organizations to embrace the future with confidence. Our expertise spans a broad spectrum, including cybersecurity assurance, data analytics, and IoT integration, ensuring we meet the unique needs of diverse industries.',
+		heading: 'About tech.novelty',
+		shortDescription: 'About Tech Novelty Solutions',
+		description:
+			' Tech Novelty Limited is a forward-thinking IT solutions provider specializing in delivering cutting-edge technologies and tailored services to drive business success. From robust infrastructure solutions and intelligent networks to AI-driven innovations, we empower organizations to embrace the future with confidence. Our expertise spans a broad spectrum, including cybersecurity assurance, data analytics, and IoT integration, ensuring we meet the unique needs of diverse industries.',
 	},
 
 	leadershipSection: {
 		icon: '/icon/icon.png',
 		heading: 'Leadership',
-		para: 'At Tech Novelty, we are guided by a team of seasoned professionals with decades of experience in IT, telecommunications, and business transformation. Our leadership is committed to fostering innovation, building lasting partnerships, and driving sustainable growth. Under the visionary guidance of our team, Tech Novelty consistently delivers excellence in every project we undertake.',
+		description:
+			'At Tech Novelty, we are guided by a team of seasoned professionals with decades of experience in IT, telecommunications, and business transformation. Our leadership is committed to fostering innovation, building lasting partnerships, and driving sustainable growth. Under the visionary guidance of our team, Tech Novelty consistently delivers excellence in every project we undertake.',
 	},
 
 	industrySection: {
 		heading: {
-			title: 'Industry of One',
-			para: 'Across industries, we bring together the capabilities needed to help clients change and grow quickly',
+			title: 'Company Vision, Mission, and Values',
 		},
 		links: [
 			{
@@ -256,13 +258,95 @@ export const data = {
 				title: 'Our Customer',
 				description:
 					'Our customers span industries such as Banking, Telecommunications, Government, Healthcare, Pharmaceuticals, and Medium and Large Enterprises. By delivering tailored solutions, we help our clients tackle complex challenges, streamline operations, and achieve their business objectives.',
-				color: '#E3062A',
+				color: '#0041f0',
 			},
 			{
 				title: 'Corporate Sustainability',
 				description:
 					'Tech Novelty is committed to corporate sustainability by integrating environmental, social, and governance (ESG) principles into our operations. We prioritize reducing our carbon footprint, supporting community development, and promoting diversity and inclusion in the workplace. By embedding sustainability into our DNA, we aim to create a positive impact on society and the environment.',
+				color: '#460073',
+			},
+		],
+	},
+	serviceSection: {
+		title: 'Services',
+		cardData: [
+			{
+				title: 'Infrastructure Solutions',
+				description:
+					'Our Infrastructure Solutions are designed to optimize and modernize your IT environment, ensuring scalability, reliability, and efficiency. For customers, this means uninterrupted operations, faster time to market, and reduced IT complexity, enabling them to stay agile and competitive.',
+				image: '/services/one.jpg',
 				color: '#E3062A',
+			},
+			{
+				title: 'Managed Services',
+				description:
+					'Our Managed Services provide continuous monitoring, maintenance, and support for your IT systems. Customers gain peace of mind knowing their IT systems are in expert hands. This translates to enhanced productivity, minimized downtime, and the freedom to focus on core business objectives while we handle the tech.',
+				image: '/services/two.jpg',
+				color: '#0041f0',
+			},
+			{
+				title: 'Intelligent Network Solutions',
+				description:
+					'We deliver Intelligent Network Solutions that enhance connectivity and performance. For customers, this means faster, more reliable connectivity that supports business growth. They experience seamless communication, optimized performance, and the flexibility to adapt to changing technological landscapes.',
+				image: '/services/one.jpg',
+				color: '#460073',
+			},
+			{
+				title: 'Backup and Recovery Solutions',
+				description:
+					'Protect your critical data with our Backup and Recovery Solutions. We implement robust data protection strategies, including automated backups and disaster recovery planning. For customers, this offers assurance and business continuity, meaning their data is safeguarded, downtime is minimized, and operations can quickly resume after disruptions.',
+				image: '/services/two.jpg',
+				color: '#460073',
+			},
+			{
+				title: 'Digital Transformation',
+				description:
+					'Embrace the future with our Digital Transformation services. We assist organizations in leveraging digital technologies to innovate processes, enhance customer experiences, and drive growth. For customers, this means streamlined operations, improved efficiency, and the ability to harness technology to stay ahead of the competition.',
+				image: '/services/one.jpg',
+				color: '#460073',
+			},
+			{
+				title: 'Cybersecurity Assurance',
+				description:
+					'Our Cybersecurity Assurance services provide comprehensive protection against evolving threats. We offer risk assessments, threat intelligence, and advanced security measures. For customers, this translates to confidence in a secure digital ecosystem, ensuring their data is protected and their reputation is safeguarded.',
+				image: '/services/two.jpg',
+				color: '#460073',
+			},
+			{
+				title: 'Data Analytics & Insights',
+				description:
+					'Unlock the power of your data with our Data Analytics & Insights services. We utilize advanced analytics and machine learning to transform data into actionable insights. For customers, this means informed decision-making, identifying growth opportunities, and optimizing operations for better outcomes.',
+				image: '/services/one.jpg',
+				color: '#460073',
+			},
+			{
+				title: 'AI/ML Solutions',
+				description:
+					'Our AI/ML Solutions integrate artificial intelligence and machine learning into your business processes. We develop custom models and applications to enhance efficiency, predict trends, and drive innovation. For customers, this means automating processes, improving decision-making, and staying at the forefront of technological advancements.',
+				image: '/services/two.jpg',
+				color: '#460073',
+			},
+			{
+				title: 'Emerging Technologies and IoT',
+				description:
+					'Stay ahead with our Emerging Technologies and IoT services. We explore and implement cutting-edge technologies, including the Internet of Things, to create smart solutions. For customers, this opens doors to smarter operations, improved efficiency, and staying ahead in a competitive landscape.',
+				image: '/services/one.jpg',
+				color: '#460073',
+			},
+			{
+				title: 'Smart Office Solutions',
+				description:
+					'Transform your workplace with our Smart Office Solutions. We design and implement intelligent systems that enhance collaboration, improve energy efficiency, and create a productive environment. For customers, this translates to a modernized workplace, better collaboration, and a space that drives innovation.',
+				image: '/services/two.jpg',
+				color: '#460073',
+			},
+			{
+				title: 'AML/ALM Solutions',
+				description:
+					'Our Anti-Money Laundering (AML) and Asset Liability Management (ALM) Solutions help financial institutions comply with regulations and manage financial risks. For customers, this means mitigating risks, optimizing resources, and maintaining trust with stakeholders while meeting regulatory standards.',
+				image: '/services/one.jpg',
+				color: '#460073',
 			},
 		],
 	},
