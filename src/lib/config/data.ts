@@ -246,7 +246,7 @@ export const data = {
 	},
 
 	valueTogether: {
-		title: 'We are recognized for the value we create together',
+		title: 'We are recognized for the value we \n create together',
 		cardData: [
 			{
 				title: 'Our OEM Partners',
@@ -354,12 +354,74 @@ export const data = {
 		title: 'Consulting',
 		description:
 			'Our consulting services empower organizations to harness the full potential of their IT investments. We combine industry best practices with cutting-edge technologies to deliver solutions tailored to each customer’s unique challenges and opportunities. This ensures sustainable growth, operational excellence, and a competitive edge in a rapidly evolving digital landscape.',
-		slider: [
-			{
+		sliderData: {
+			one: {
 				title: 'IT Strategy & Planning',
-				shortDescription: '',
+				image: '/consultingSlider/one.jpg',
+				shortDescription:
+					'We help organizations align their IT strategies with business goals to maximize value. This includes',
+				textList: [
+					'Assessing current IT capabilities.',
+					'Developing roadmaps for future growth.',
+					'Identifying opportunities to optimize technology investments.For customers, this means a clear direction for their IT initiatives, ensuring scalability, cost-efficiency, and alignment with strategic objectives.',
+				],
 			},
-		],
+			two: {
+				title: 'IT Governance & Compliance',
+				image: '/consultingSlider/two.jpg',
+				shortDescription:
+					'Our IT Governance & Compliance services ensure that your IT operations meet regulatory requirements and follow best practices. This includes:',
+				textList: [
+					'Establishing robust IT governance frameworks.',
+					'Ensuring compliance with global and industry-specific standards.',
+					'Conducting regular audits and risk assessments. For customers, this translates to reduced risks, enhanced data security, and confidence in meeting compliance standards.',
+				],
+			},
+			three: {
+				title: 'Application Design & Deployment',
+				image: '/consultingSlider/one.jpg',
+				shortDescription:
+					'We provide end-to-end services for developing and deploying business applications. This includes:',
+				textList: [
+					'Requirement analysis and system design.',
+					'Application development, testing, and deployment.',
+					'Ongoing maintenance and support. For customers, this means streamlined operations, better user experiences, and technology that evolves with their needs.',
+				],
+			},
+			four: {
+				title: 'Enterprise Resource Planning (ERP)',
+				image: '/consultingSlider/two.jpg',
+				shortDescription:
+					'We help businesses implement and optimize ERP systems to integrate and manage their operations. Our services include:',
+				textList: [
+					'ERP system selection and implementation.',
+					'Customization to meet unique business needs.',
+					'Post-implementation support and training. For customers, this results in enhanced productivity, improved resource management, and real-time insights into their operations.',
+				],
+			},
+			five: {
+				title: 'Project Management',
+				image: '/consultingSlider/one.jpg',
+				shortDescription:
+					'We deliver expert project management services to ensure the success of your IT initiatives. This includes:',
+				textList: [
+					'Defining project scope and objectives.',
+					'Planning and resource allocation.',
+					'Monitoring progress and managing risks. For customers, this means on-time, within-budget delivery of projects that align with business goals.',
+				],
+			},
+			six: {
+				title: 'Cloud Computing Solutions',
+				image: '/consultingSlider/two.jpg',
+				shortDescription:
+					'We design and implement cloud strategies that transform businesses. Our services include:',
+				textList: [
+					'Cloud readiness assessments.',
+					'Migration to private, public, or hybrid cloud environments.',
+					'Ongoing management and optimization of cloud resources. For customers, this means greater flexibility, reduced IT costs, and improved system reliability and scalability.',
+				],
+			},
+		},
 	},
 
 	footer: {
