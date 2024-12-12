@@ -56,15 +56,16 @@ const Page = () => {
 			<SectionPadding py={'3rem'} bg={colors?.black}>
 				<IndustriesFaq />
 			</SectionPadding>
-			<SectionPadding py={'6rem'} style={careerStyle}>
+			<SectionPadding py={'6rem'} style={careerStyle} id='career'>
 				<CareerSection />
 			</SectionPadding>
-			<SectionPadding py={'3rem'}>
+			<SectionPadding py={'3rem'} id='partner'>
 				<PartnerSection />
 			</SectionPadding>
 			<SectionPadding
 				py={'3rem'}
 				background={`linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 4, 39, 0.9))`}
+				id='contact'
 			>
 				<ContactSection />
 			</SectionPadding>
