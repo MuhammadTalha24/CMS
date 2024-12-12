@@ -213,36 +213,53 @@ export const data = {
       "At Tech Novelty, we are guided by a team of seasoned professionals with decades of experience in IT, telecommunications, and business transformation. Our leadership is committed to fostering innovation, building lasting partnerships, and driving sustainable growth. Under the visionary guidance of our team, Tech Novelty consistently delivers excellence in every project we undertake.",
   },
 
-  industrySection: {
+  missionVision: {
     heading: {
       title: "Company Vision, Mission, and Values",
     },
-    links: [
+    items: [
       {
-        name: "Strategy & Consulting",
-        link: "/",
+        name: "Vision",
+        dataList: {
+          title:
+            "To be a global leader in IT solutions, empowering businesses to achieve their full potential through innovation and technology.",
+          image: "/rainbow.jpg",
+        },
       },
       {
-        name: "Technology",
-        link: "/",
+        name: "Mission",
+        dataList: {
+          title:
+            "To deliver cutting-edge solutions that address our clients' challenges, foster growth, and create value for all stakeholders.",
+          image: "/rainbowTwo.jpg",
+        },
       },
       {
-        name: "Operations",
-        link: "/",
-      },
-      {
-        name: "Industry X",
-        link: "/",
-      },
-      {
-        name: "Song",
-        link: "/",
+        name: "Values",
+        dataList: [
+          {
+            boldText: "Customer-Centricity:",
+            text: "We put our customers at the heart of everything we do, ensuring their needs guide our innovation and solutions.",
+          },
+          {
+            boldText: "Loyalty:",
+            text: "We are dedicated to building lasting relationships with our customers, employees, and partners, valuing trust and mutual growth.",
+          },
+          {
+            boldText: "Integrity:",
+            text: "We act with honesty, transparency, and accountability, earning the trust of our clients and partners.",
+          },
+          {
+            boldText: "Collaboration:",
+            text: "We believe in the power of teamwork, leveraging diverse skills and perspectives to achieve collective goals.",
+          },
+          {
+            boldText: "Kind to Nature:",
+            text: "We are committed to minimizing our environmental impact and promoting sustainability. By adopting eco-friendly practices and leveraging technology for greener solutions, we aim to protect the planet while driving innovation. Tech Novelty believes in creating a balance between progress and preserving nature for future generations.",
+          },
+        ],
       },
     ],
-    imagesSection: {
-      title: "Envisioning and executing change at speed and scale",
-      image: "/rainbow.jpg",
-    },
   },
 
   valueTogether: {
