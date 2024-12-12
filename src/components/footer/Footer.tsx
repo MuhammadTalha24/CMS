@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, BoxProps, Grid, GridProps } from '@chakra-ui/react';
+import { Box, BoxProps, Flex, Grid, GridProps } from '@chakra-ui/react';
 import React, { FC, ReactNode } from 'react';
 import { data } from '@/lib/config/data';
 import {
@@ -11,6 +11,11 @@ import {
 	SectionPadding,
 } from '@/components';
 import { useColors } from '@/hooks';
+const TEMPLATE_COLUMNS = {
+	base: '1fr',
+	md: '1fr 1fr',
+	xl: 'repeat(4, 1fr)',
+};
 
 type FooterProps = GridProps & {
 	image?: string;
@@ -25,8 +30,20 @@ const Footer: FC<FooterProps> = ({}) => {
 				<FooterLink />
 			</SectionWrapper>
 			<SectionWrapper py='3rem'>
-				<Grid gridTemplateColumns={'repeat(4, 1fr)'}>
-					<FlexImage w='250px' h='auto' image='/logo/logo.png' />
+				<Grid gridTemplateColumns={TEMPLATE_COLUMNS}>
+					<Flex
+						justifyContent='center'
+						alignItems={{ base: 'flex-start', xl: 'center' }}
+						px='1rem'
+						mb={{ base: 12, md: 0 }}
+					>
+						<FlexImage
+							justifyContent='center'
+							w='250px'
+							h='auto'
+							image='/logo/logo.png'
+						/>
+					</Flex>
 					{footer?.columnLinks.map((item: any, i: number) => (
 						<FooterColumnLinks data={item} key={i} />
 					))}

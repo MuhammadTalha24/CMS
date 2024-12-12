@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, BoxProps } from '@chakra-ui/react';
+import { FlexProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 import { FlexColumn, Heading, NormalText } from '@/components';
 import Link from 'next/link';
 import { useColors } from '@/hooks';
 
-type FooterColumnLinksProps = BoxProps & {
+type FooterColumnLinksProps = FlexProps & {
 	data: {
 		title: string;
 		links: {
@@ -17,7 +17,11 @@ type FooterColumnLinksProps = BoxProps & {
 const FooterColumnLinks: FC<FooterColumnLinksProps> = ({ data, ...props }) => {
 	const { colors } = useColors();
 	return (
-		<Box mb='1rem' {...props}>
+		<FlexColumn
+			alignItems={{ base: 'center', xl: 'flex-start' }}
+			mb={{ base: 12, md: '1rem' }}
+			{...props}
+		>
 			<Heading fontSize='1.2rem' mb='1.2rem'>
 				{data?.title}
 			</Heading>
@@ -36,7 +40,7 @@ const FooterColumnLinks: FC<FooterColumnLinksProps> = ({ data, ...props }) => {
 					</Link>
 				))}
 			</FlexColumn>
-		</Box>
+		</FlexColumn>
 	);
 };
 

@@ -18,6 +18,13 @@ const ServiceSection: FC<ServiceSectionProps> = ({}) => {
 	const isShowingAll = visibleItems === serviceSection?.cardData?.length;
 	const { colors } = useColors();
 
+	const TEMPLATE_COLUMNS = {
+		base: '1fr',
+		md: '1fr 1fr',
+		lg: 'repeat(3, 1fr)',
+		'2xl': 'repeat(4, 1fr)',
+	};
+
 	const handleToggleView = () => {
 		if (isShowingAll) {
 			setVisibleItems(4); // Reset to initial state
@@ -27,10 +34,15 @@ const ServiceSection: FC<ServiceSectionProps> = ({}) => {
 	};
 	return (
 		<Box>
-			<Heading fontSize='3rem' fontWeight='700' pb='2rem' mb='1rem'>
+			<Heading
+				fontSize={{ base: '1.2rem', md: '2rem', lg: '3rem' }}
+				fontWeight='700'
+				pb='2rem'
+				mb='1rem'
+			>
 				{serviceSection?.title}
 			</Heading>
-			<Grid gridTemplateColumns='repeat(4, 1fr)' gap={6}>
+			<Grid gridTemplateColumns={TEMPLATE_COLUMNS} gap={6}>
 				{serviceSection?.cardData
 					?.slice(0, visibleItems)
 					.map((item: any, i: number) => (
@@ -67,10 +79,16 @@ const ServiceSection: FC<ServiceSectionProps> = ({}) => {
 								zIndex: 1,
 							}}
 						>
-							<Heading fontSize='1.375rem' fontWeight='600' mb={4}>
+							<Heading
+								fontSize={{ base: '1.25rem', lg: '1.5rem' }}
+								fontWeight='600'
+								mb={4}
+							>
 								{item?.title}
 							</Heading>
-							<NormalText>{item?.description}</NormalText>
+							<NormalText fontSize={{ base: '.875rem', md: '1rem' }}>
+								{item?.description}
+							</NormalText>
 						</Box>
 					))}
 			</Grid>

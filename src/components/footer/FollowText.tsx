@@ -15,7 +15,7 @@ type FollowTextProps = FlexProps & {};
 const FollowText: FC<FollowTextProps> = ({ ...props }) => {
 	const { footer } = data;
 	return (
-		<FlexColumn justifyContent='center' {...props}>
+		<FlexColumn mb={{ base: 12, md: 0 }} justifyContent='center' {...props}>
 			<Heading fontSize='1.2rem' textAlign='center'>
 				{footer?.followText?.title}
 			</Heading>

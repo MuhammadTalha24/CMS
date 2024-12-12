@@ -156,7 +156,7 @@ const ConsultingSlider: FC<ConsultingSliderProps> = ({ sliderData }) => {
 									transform={'translate(-50%, -50%)'}
 								>
 									<Heading
-										fontSize={{ base: '1.5rem', lg: '3rem' }}
+										fontSize={{ base: '1.2rem', md: '2rem', xl: '3rem' }}
 										fontWeight='600'
 										color={colors?.white}
 										textAlign={'center'}
@@ -164,12 +164,20 @@ const ConsultingSlider: FC<ConsultingSliderProps> = ({ sliderData }) => {
 										{item?.title}
 									</Heading>
 									{item?.shortDescription && (
-										<NormalText fontSize='1.5rem' textAlign={'center'}>
+										<NormalText
+											fontSize={{ base: '1rem', xl: '1.5rem' }}
+											textAlign={'center'}
+											mb='1rem'
+										>
 											{item?.shortDescription}
 										</NormalText>
 									)}
 									{item?.textList?.map((item: any, i: number) => (
-										<NormalText key={i} fontSize='1rem' color={colors?.white}>
+										<NormalText
+											key={i}
+											fontSize={{ base: '.875rem', md: '1rem' }}
+											color={colors?.white}
+										>
 											{`• ${item}`}
 										</NormalText>
 									))}

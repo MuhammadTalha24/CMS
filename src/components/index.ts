@@ -15,3 +15,4 @@ export * from './icon';
 export * from './home';
 export * from './footer';
 export * from './faq/index';
+export * from './menu-drawer/index';

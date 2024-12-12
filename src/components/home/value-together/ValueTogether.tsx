@@ -1,8 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, BoxProps, Flex } from '@chakra-ui/react';
+import { Box, BoxProps, Grid } from '@chakra-ui/react';
 import React, { FC, ReactNode } from 'react';
 import { Heading, NormalText } from '@/components';
 import { data } from '@/lib/config/data';
+
+const TEMPLATE_COLUMNS = {
+	base: '1fr',
+	md: '1fr 1fr',
+	xl: 'repeat(3, 1fr)',
+};
 
 type ValueTogetherProps = BoxProps & {
 	children?: ReactNode;
@@ -12,30 +18,29 @@ const ValueTogether: FC<ValueTogetherProps> = ({}) => {
 	return (
 		<Box>
 			<Heading
-				fontSize='1.75rem'
+				fontSize={{ base: '1.25', lg: '1.75rem' }}
 				fontWeight='700'
 				pb='2rem'
-				whiteSpace='pre-line'
+				whiteSpace={{ base: 'normal', lg: 'pre-line' }}
 			>
 				{valueTogether?.title}
 			</Heading>
-			<Flex justifyContent='space-between'>
+			<Grid gridTemplateColumns={TEMPLATE_COLUMNS} gap={6}>
 				{valueTogether?.cardData?.map((item: any, i: number) => (
-					<Box
-						key={i}
-						mx='12px'
-						bg={item?.color}
-						px='2rem'
-						py='3rem'
-						borderRadius={2}
-					>
-						<Heading fontSize='1.5rem' fontWeight='600'>
+					<Box key={i} bg={item?.color} px='2rem' py='3rem' borderRadius={2}>
+						<Heading
+							fontSize={{ base: '1.25rem', lg: '1.5rem' }}
+							fontWeight='600'
+							mb={2}
+						>
 							{item?.title}
 						</Heading>
-						<NormalText>{item?.description}</NormalText>
+						<NormalText fontSize={{ base: '.875rem', md: '1rem' }}>
+							{item?.description}
+						</NormalText>
 					</Box>
 				))}
-			</Flex>
+			</Grid>
 		</Box>
 	);
 };
