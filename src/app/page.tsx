@@ -35,7 +35,7 @@ const Page = () => {
 				<IconSection data={aboutSection} />
 			</SectionPadding>
 			<SectionPadding py={'3rem'} bg={colors?.black}>
-				<LeadershipSection order data={leadershipSection} />
+				<LeadershipSection order={true} data={leadershipSection} />
 			</SectionPadding>
 			<SectionPadding py={'3rem'} bg={colors?.black}>
 				<MissionVision />

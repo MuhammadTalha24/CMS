@@ -20,10 +20,13 @@ const ConsultingSection: React.FC<ConsultingSectionProps> = ({ ...props }) => {
 	return (
 		<Box {...props} py='2rem'>
 			<SectionPadding pb='3rem' bg={colors?.black}>
-				<Heading fontSize='3rem' fontWeight='700'>
+				<Heading
+					fontSize={{ base: '1.5rem', md: '2rem', xl: '3rem' }}
+					fontWeight='700'
+				>
 					{consultingSlider?.title}
 				</Heading>
-				<NormalText fontSize='1.5rem'>
+				<NormalText fontSize={{ base: '1rem', xl: '1.5rem' }}>
 					{consultingSlider?.description}
 				</NormalText>
 			</SectionPadding>

@@ -46,7 +46,6 @@ const NextButton = ({ onClick }: { onClick?: () => void }) => {
 		</Center>
 	);
 };
-
 // Custom Next Button
 
 type SliderItem = {
@@ -138,20 +137,19 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 								w='full'
 								h='full'
 							/>
-							{/* {item.heading && <Overlay />} */}
 							{item?.heading && <Overlay />}
 
 							{item?.heading && (
 								<Box
 									zIndex={zIndex?.hero}
 									position='absolute'
-									w='70%'
+									w={{ base: '90%', lg: '70%' }}
 									top='50%'
 									left='50%'
 									transform={'translate(-50%, -50%)'}
 								>
 									<Heading
-										fontSize={{ base: '1.5rem', lg: '2.5rem' }}
+										fontSize={{ base: '1.2rem', md: '2rem', lg: '2.5rem' }}
 										fontWeight='600'
 										color={colors?.white}
 										textAlign={'center'}
@@ -160,8 +158,9 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 									</Heading>
 									{item?.text && (
 										<NormalText
-											fontSize={{ base: '1rem', lg: '1.25rem' }}
+											fontSize={{ base: '.875rem', md: '1rem', lg: '1.25rem' }}
 											textAlign={'center'}
+											fontWeight='200'
 										>
 											{item?.text}
 										</NormalText>
@@ -169,8 +168,9 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 									{item?.textlist?.map((item: any, i: number) => (
 										<NormalText
 											key={i}
-											fontSize={{ base: '1rem', lg: '1.25rem' }}
+											fontSize={{ base: '.875rem', md: '1rem', lg: '1.25rem' }}
 											color={colors?.white}
+											fontWeight='200'
 										>
 											{`• ${item}`}
 										</NormalText>
