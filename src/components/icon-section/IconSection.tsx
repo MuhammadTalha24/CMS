@@ -2,6 +2,7 @@
 import { Grid, GridProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 import { FlexColumn, FlexImage, Heading, NormalText } from '@/components';
+import { responsive } from '@/lib/config/constants';
 
 type IconSectionProps = GridProps & {
 	data: any;
@@ -18,10 +19,16 @@ const IconSection: FC<IconSectionProps> = ({ data, order, ...props }) => {
 			/>
 			<FlexColumn order={order ? 1 : 2} justifyContent='center'>
 				<TextHeading>{data?.heading}</TextHeading>
-				<NormalText fontSize='1.75rem' py='1rem'>
+				<Heading fontWeight='700' fontSize={responsive?.smallTitle} py='1rem'>
 					{data?.shortDescription}
+				</Heading>
+				<NormalText
+					lineHeight='1.7'
+					fontSize={{ base: '.75rem', md: '.875rem', lg: '1rem' }}
+					fontWeight={responsive?.text}
+				>
+					{data?.description}
 				</NormalText>
-				<NormalText lineHeight='1.7'>{data?.description}</NormalText>
 			</FlexColumn>
 		</Grid>
 	);
@@ -30,11 +37,7 @@ const IconSection: FC<IconSectionProps> = ({ data, order, ...props }) => {
 export default IconSection;
 
 const TextHeading = ({ children }: { children: string }) => (
-	<Heading
-		fontSize={{ base: '1rem', lg: '3rem' }}
-		fontWeight='700'
-		lineHeight='1.2'
-	>
+	<Heading fontSize={responsive?.bigTitle} fontWeight='700' lineHeight='1.2'>
 		{children}
 	</Heading>
 );

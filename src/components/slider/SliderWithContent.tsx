@@ -143,7 +143,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 								<Box
 									zIndex={zIndex?.hero}
 									position='absolute'
-									w={{ base: '90%', lg: '70%' }}
+									w={{ base: '90%', xl: '70%' }}
 									top='50%'
 									left='50%'
 									transform={'translate(-50%, -50%)'}

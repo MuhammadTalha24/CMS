@@ -3,6 +3,7 @@ import { Box, BoxProps, Grid } from '@chakra-ui/react';
 import React, { FC, ReactNode } from 'react';
 import { Heading, NormalText } from '@/components';
 import { data } from '@/lib/config/data';
+import { responsive } from '@/lib/config/constants';
 
 const TEMPLATE_COLUMNS = {
 	base: '1fr',
@@ -18,7 +19,7 @@ const ValueTogether: FC<ValueTogetherProps> = ({}) => {
 	return (
 		<Box>
 			<Heading
-				fontSize={{ base: '1.25', lg: '1.75rem' }}
+				fontSize={responsive?.smallTitle}
 				fontWeight='700'
 				pb='2rem'
 				whiteSpace={{ base: 'normal', lg: 'pre-line' }}

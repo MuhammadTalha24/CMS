@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Grid, GridProps } from '@chakra-ui/react';
+import { Grid, GridProps, TextProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 import { FlexColumn, FlexImage, Heading, NormalText } from '@/components';
+import { responsive } from '@/lib/config/constants';
 
 type LeadershipSectionProps = GridProps & {
 	data: any;
@@ -20,12 +21,18 @@ const LeadershipSection: FC<LeadershipSectionProps> = ({
 				image={data?.icon}
 				mb={{ base: 12, md: 0 }}
 			/>
-			<FlexColumn order={order ? 1 : 2} justifyContent='center'>
-				<TextHeading>{data?.heading}</TextHeading>
-				<NormalText fontSize='1.75rem' py='1rem'>
-					{data?.shortDescription}
+			<FlexColumn
+				order={order ? 1 : 2}
+				justifyContent={{ base: 'flex-start', md: 'center' }}
+			>
+				<TextHeading mb={4}>{data?.heading}</TextHeading>
+
+				<NormalText
+					fontSize={{ base: '.75rem', md: '.875rem', lg: '1rem' }}
+					lineHeight='1.7'
+				>
+					{data?.description}
 				</NormalText>
-				<NormalText lineHeight='1.7'>{data?.description}</NormalText>
 			</FlexColumn>
 		</Grid>
 	);
@@ -33,11 +40,15 @@ const LeadershipSection: FC<LeadershipSectionProps> = ({
 
 export default LeadershipSection;
 
-const TextHeading = ({ children }: { children: string }) => (
+const TextHeading = ({
+	children,
+	...props
+}: TextProps & { children: string }) => (
 	<Heading
-		fontSize={{ base: '1rem', lg: '1.75rem' }}
+		fontSize={responsive?.smallTitle}
 		fontWeight='700'
-		lineHeight='1.2'
+		// lineHeight='1.2'
+		{...props}
 	>
 		{children}
 	</Heading>
