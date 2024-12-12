@@ -35,7 +35,12 @@ const PartnerSection: FC<PartnerSectionProps> = ({}) => {
 					/>
 				</Flex>
 				{partnersSection?.thirdTwoColumn?.map((item: any, i: number) => (
-					<PartnerCard mr='28px' my='16px' data={item} key={i} />
+					<PartnerCard
+						mr={i == 1 ? '0px' : '1.75rem'}
+						my='16px'
+						data={item}
+						key={i}
+					/>
 				))}
 			</Grid>
 		</Box>

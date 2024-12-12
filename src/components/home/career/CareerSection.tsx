@@ -20,8 +20,8 @@ const CareerSection: FC<CareerSectionProps> = ({ ...props }) => {
 	const { career } = data;
 	const { colors } = useColors();
 	return (
-		<Box ml='680px' {...props}>
-			<Heading fontSize='1.75rem' mb='1rem' fontWeight='bold'>
+		<Box ml={{ base: '10%', md: '20%', lg: '40%' }} {...props}>
+			<Heading fontSize='3rem' mb='1rem' fontWeight='bold'>
 				{career?.title}
 			</Heading>
 			<Box

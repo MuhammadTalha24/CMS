@@ -151,7 +151,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 									transform={'translate(-50%, -50%)'}
 								>
 									<Heading
-										fontSize={{ base: '1.5rem', lg: '3rem' }}
+										fontSize={{ base: '1.5rem', lg: '2.5rem' }}
 										fontWeight='600'
 										color={colors?.white}
 										textAlign={'center'}
@@ -159,14 +159,17 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 										{item?.heading}
 									</Heading>
 									{item?.text && (
-										<NormalText fontSize='1.5rem' textAlign={'center'}>
+										<NormalText
+											fontSize={{ base: '1rem', lg: '1.25rem' }}
+											textAlign={'center'}
+										>
 											{item?.text}
 										</NormalText>
 									)}
 									{item?.textlist?.map((item: any, i: number) => (
 										<NormalText
 											key={i}
-											fontSize={{ base: '1.5rem', lg: '1.5rem' }}
+											fontSize={{ base: '1rem', lg: '1.25rem' }}
 											color={colors?.white}
 										>
 											{`• ${item}`}

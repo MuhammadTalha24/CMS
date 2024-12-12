@@ -18,9 +18,10 @@ type FooterProps = GridProps & {
 
 const Footer: FC<FooterProps> = ({}) => {
 	const { footer } = data;
+	const { colors } = useColors();
 	return (
 		<Box>
-			<SectionWrapper>
+			<SectionWrapper backgroundColor={colors?.primary}>
 				<FooterLink />
 			</SectionWrapper>
 			<SectionWrapper py='3rem'>
