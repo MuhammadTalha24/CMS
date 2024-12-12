@@ -29,7 +29,7 @@ const Footer: FC<FooterProps> = ({}) => {
 			<SectionWrapper backgroundColor={colors?.primary}>
 				<FooterLink />
 			</SectionWrapper>
-			<SectionWrapper py='3rem'>
+			<SectionWrapper py='3rem' backgroundColor={colors?.primary}>
 				<Grid gridTemplateColumns={TEMPLATE_COLUMNS}>
 					<Flex
 						justifyContent='center'
@@ -41,7 +41,7 @@ const Footer: FC<FooterProps> = ({}) => {
 							justifyContent='center'
 							w='250px'
 							h='auto'
-							image='/logo/logo.png'
+							image='/logo/footerLogo.png'
 						/>
 					</Flex>
 					{footer?.columnLinks.map((item: any, i: number) => (

@@ -29,7 +29,7 @@ const FooterColumnLinks: FC<FooterColumnLinksProps> = ({ data, ...props }) => {
 				{data?.links?.map((links: any, i: number) => (
 					<Link key={i} href={links?.link}>
 						<NormalText
-							color={colors?.textBlack}
+							color={colors?.lightWhite}
 							transition='.3s'
 							mb='.8rem'
 							display='inline-block'

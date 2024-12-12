@@ -171,8 +171,7 @@ export const data = {
 			image: '/slider/one.jpg',
 		},
 		two: {
-			heading:
-				'Robotics Process Automation: Robotic Process Automation (RPA) services can include',
+			heading: 'Robotics Process Automation: Robotic Process Automation (RPA)',
 			image: '/slider/two.jpg',
 			textlist: [
 				'Consulting: Helps identify opportunities for automation and overcome challenges.',
@@ -583,16 +582,17 @@ export const data = {
 		],
 		footerLinks: [
 			{
-				text: 'Partners & Alliances',
-				link: '/',
+				text: 'Careers',
+				link: '#career',
 			},
 			{
-				text: 'Careers',
-				link: '/',
+				text: 'Partners & Alliances',
+				link: '#partner',
 			},
+
 			{
 				text: 'Contact Us',
-				link: '/',
+				link: '#contact',
 			},
 		],
 		followText: {

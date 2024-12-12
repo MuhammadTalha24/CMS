@@ -22,7 +22,7 @@ const PreviousButton = ({ onClick }: { onClick?: () => void }) => {
 			h='40px'
 			borderRadius='full'
 			bg={colors?.black}
-			zIndex='999'
+			zIndex={zIndex?.hero}
 			cursor='pointer'
 			onClick={onClick} // Pass onClick here
 		>
@@ -43,7 +43,7 @@ const NextButton = ({ onClick }: { onClick?: () => void }) => {
 			h='40px'
 			borderRadius='full'
 			bg={colors?.black}
-			zIndex='999'
+			zIndex={zIndex?.hero}
 			cursor='pointer'
 			onClick={onClick} // Pass onClick here
 		>
@@ -150,7 +150,7 @@ const ConsultingSlider: FC<ConsultingSliderProps> = ({ sliderData }) => {
 								<Box
 									zIndex={zIndex?.hero}
 									position='absolute'
-									w='70%'
+									w={{ base: '90%', lg: '80%', '2xl': '70%' }}
 									top='50%'
 									left='50%'
 									transform={'translate(-50%, -50%)'}

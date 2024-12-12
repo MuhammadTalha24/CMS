@@ -16,6 +16,8 @@ import {
 } from '@/components';
 import { useColors } from '@/hooks';
 import { data } from '@/lib/config/data';
+import { BoxProps } from '@chakra-ui/react';
+import { ReactNode } from 'react';
 
 const careerStyle = {
 	background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/career/one.jpg")`,
@@ -31,12 +33,12 @@ const Page = () => {
 	return (
 		<PageLayout>
 			<SliderWithContent sliderData={data?.hero} />
-			<SectionPadding py={'3rem'} bg={colors?.black}>
+			<Wrapper>
 				<IconSection data={aboutSection} />
-			</SectionPadding>
-			<SectionPadding py={'3rem'} bg={colors?.black}>
+			</Wrapper>
+			<Wrapper>
 				<LeadershipSection order={true} data={leadershipSection} />
-			</SectionPadding>
+			</Wrapper>
 			<SectionPadding py={'3rem'} bg={colors?.black}>
 				<MissionVision />
 			</SectionPadding>
@@ -54,15 +56,16 @@ const Page = () => {
 			<SectionPadding py={'3rem'} bg={colors?.black}>
 				<IndustriesFaq />
 			</SectionPadding>
-			<SectionPadding py={'6rem'} style={careerStyle}>
+			<SectionPadding py={'6rem'} style={careerStyle} id='career'>
 				<CareerSection />
 			</SectionPadding>
-			<SectionPadding py={'3rem'}>
+			<SectionPadding py={'3rem'} id='partner'>
 				<PartnerSection />
 			</SectionPadding>
 			<SectionPadding
 				py={'3rem'}
 				background={`linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 4, 39, 0.9))`}
+				id='contact'
 			>
 				<ContactSection />
 			</SectionPadding>
@@ -71,3 +74,15 @@ const Page = () => {
 };
 
 export default Page;
+
+const Wrapper = ({
+	children,
+	...props
+}: BoxProps & { children: ReactNode }) => {
+	const { colors } = useColors();
+	return (
+		<SectionPadding py={'3rem'} bg={colors?.black} {...props}>
+			{children}
+		</SectionPadding>
+	);
+};
