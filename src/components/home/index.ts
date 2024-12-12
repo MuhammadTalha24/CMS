@@ -5,3 +5,4 @@ export * from './consulting/index';
 export * from './industrie-faq/index';
 export * from './career/index';
 export * from './partners/index';
+export * from './contact-section/index';
