@@ -17,7 +17,8 @@ const FooterLink: FC<FooterLinkProps> = ({ ...props }) => {
 					<NormalText
 						mx={'1rem'}
 						transition='.3s'
-						_hover={{ color: colors?.textBlack }}
+						color={colors?.lightWhite}
+						_hover={{ color: colors?.white }}
 					>
 						{item?.text}
 					</NormalText>
