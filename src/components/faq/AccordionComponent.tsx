@@ -24,7 +24,7 @@ const AccordionComponent: FC<AccordionComponentProps> = ({ data }) => {
 						color={colors?.white}
 						py='1rem'
 						fontFamily={fonts?.NibPro}
-						fontSize='1.25rem'
+						fontSize={{ base: '1rem', lg: '1.25rem' }}
 					>
 						{item?.title}
 					</AccordionItemTrigger>
@@ -32,6 +32,7 @@ const AccordionComponent: FC<AccordionComponentProps> = ({ data }) => {
 						color={colors?.white}
 						py='1rem'
 						fontFamily={fonts?.Poppins}
+						fontSize={{ base: '.875rem', lg: '1rem' }}
 					>
 						{item?.description}
 					</AccordionItemContent>

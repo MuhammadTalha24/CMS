@@ -9,10 +9,10 @@ import { useColors } from '@/hooks';
 const style = {
 	position: 'absolute',
 	content: '""',
-	top: '10px',
+	top: { base: '2px', lg: '10px' },
 	left: '-20px',
 	width: '6px',
-	height: '44px',
+	height: { base: '20px', lg: '44px' },
 };
 
 type IndustrieFaqProps = BoxProps & {};
@@ -20,7 +20,7 @@ const IndustrieFaq: FC<IndustrieFaqProps> = ({ ...props }) => {
 	const { industries } = data;
 	const { colors } = useColors();
 	return (
-		<Box w='70%' mx='auto' {...props}>
+		<Box w={{ base: '100%', lg: '70%' }} mx='auto' {...props}>
 			<Heading
 				fontSize={{ base: '1.2rem', lg: '3rem' }}
 				fontWeight='700'

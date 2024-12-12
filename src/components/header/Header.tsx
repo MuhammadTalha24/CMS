@@ -3,13 +3,15 @@ import {
 	FlexImage,
 	Heading,
 	Icon,
+	IconContainer,
+	MenuDrawer,
 	NormalText,
 	SectionPadding,
 } from '@/components';
 import { colors } from '@/hooks/useColors';
 import { padding, zIndex } from '@/lib/config/constants';
 import { data } from '@/lib/config/data';
-import { Box, Collapsible, Flex } from '@chakra-ui/react';
+import { Box, Center, Collapsible, Flex } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FC, useEffect, useState } from 'react';
 
@@ -54,13 +56,34 @@ const Header: FC<HeaderProps> = () => {
 			top='0'
 			left='0'
 			zIndex={zIndex.header}
+			// bg='red'
 		>
 			<SectionPadding>
 				<Flex alignItems='center'>
-					<Link href='/'>
-						<FlexImage maxW='14rem' image={header?.logo} />
-					</Link>
-					<Flex w='full' justifyContent='center' alignItems='center' h='auto'>
+					<Center
+						justifyContent={{ base: 'center', xl: 'flex-start' }}
+						w={{ base: 'full', xl: 'auto' }}
+						order={{ base: 2, md: 1 }}
+					>
+						<Link href='/'>
+							<FlexImage maxW='14rem' image={header?.logo} />
+						</Link>
+					</Center>
+					<Box display={{ base: 'block', xl: 'none' }}>
+						<MenuDrawer>
+							<IconContainer w='36px' display='inline'>
+								<Icon color={colors?.white} name='menu' size={24} />
+							</IconContainer>
+						</MenuDrawer>
+					</Box>
+					<Flex
+						w='full'
+						justifyContent='center'
+						alignItems='center'
+						h='auto'
+						display={{ base: 'none', xl: 'flex' }}
+						order={{ base: 1, md: 2 }}
+					>
 						{header?.navItems?.map((item, i: number) => (
 							<Box key={i}>
 								<Flex

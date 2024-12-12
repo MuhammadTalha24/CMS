@@ -21,9 +21,9 @@ const MissionVision = () => {
 		},
 	});
 	return (
-		<Box h='80vh' position='relative'>
+		<Box h={'auto'} overflow='hidden' position='relative'>
 			<IndustryHeading mb='4rem' />
-			<Grid templateColumns='1fr 1fr' gap={6}>
+			<Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
 				<FlexColumn>
 					{missionVision?.items?.map((item: any, i: number) => (
 						<Box py='.5rem' key={i}>

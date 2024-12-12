@@ -10,8 +10,12 @@ type IconSectionProps = GridProps & {
 
 const IconSection: FC<IconSectionProps> = ({ data, order, ...props }) => {
 	return (
-		<Grid templateColumns='1fr 1fr' gap={6} {...props}>
-			<FlexImage order={order ? 2 : 1} image={data?.icon} />
+		<Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6} {...props}>
+			<FlexImage
+				order={order ? 2 : 1}
+				image={data?.icon}
+				mb={{ base: 12, md: 0 }}
+			/>
 			<FlexColumn order={order ? 1 : 2} justifyContent='center'>
 				<TextHeading>{data?.heading}</TextHeading>
 				<NormalText fontSize='1.75rem' py='1rem'>

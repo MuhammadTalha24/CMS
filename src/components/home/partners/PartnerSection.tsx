@@ -17,14 +17,17 @@ const PartnerSection: FC<PartnerSectionProps> = ({}) => {
 	return (
 		<Box>
 			<Box pb='2.5rem'>
-				<Heading fontSize='3rem' fontWeight='700'>
+				<Heading
+					fontSize={{ base: '1.5rem', md: '2rem', xl: '3rem' }}
+					fontWeight='700'
+				>
 					{partnersSection?.title}
 				</Heading>
-				<NormalText fontSize='1.5rem'>
+				<NormalText fontSize={{ base: '1rem', xl: '1.5rem' }}>
 					{partnersSection?.description}
 				</NormalText>
 			</Box>
-			<Grid gridTemplateColumns='1fr 1fr'>
+			<Grid gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}>
 				<PartnerCard data={partnersSection?.firstColumn} />
 				<Flex bg='red' w='full' h='300px'>
 					<Image
@@ -36,7 +39,7 @@ const PartnerSection: FC<PartnerSectionProps> = ({}) => {
 				</Flex>
 				{partnersSection?.thirdTwoColumn?.map((item: any, i: number) => (
 					<PartnerCard
-						mr={i == 1 ? '0px' : '1.75rem'}
+						mr={i == 1 ? '0px' : { base: '0px', md: '1.75rem' }}
 						my='16px'
 						data={item}
 						key={i}
