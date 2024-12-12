@@ -8,6 +8,7 @@ import { useColors } from '@/hooks';
 import { fonts } from '@/hooks/useFont';
 import { data } from '@/lib/config/data';
 import { useState } from 'react';
+import { responsive } from '@/lib/config/constants';
 
 const MissionVision = () => {
 	const { missionVision } = data;
@@ -22,7 +23,7 @@ const MissionVision = () => {
 	});
 	return (
 		<Box h={'auto'} overflow='hidden' position='relative'>
-			<IndustryHeading mb='4rem' />
+			<IndustryHeading mb={{ base: '1rem', md: '4rem' }} />
 			<Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
 				<FlexColumn>
 					{missionVision?.items?.map((item: any, i: number) => (
@@ -33,7 +34,7 @@ const MissionVision = () => {
 										? colors?.white
 										: colors?.textBlack
 								}
-								fontSize={'1.5rem'}
+								fontSize={responsive?.textBig}
 								fontWeight='600'
 								transition='.3s'
 								display='inline'
@@ -55,7 +56,7 @@ const MissionVision = () => {
 							<Box key={i} mb={2}>
 								<Text
 									fontFamily={fonts?.Poppins}
-									fontSize='1rem'
+									fontSize={responsive?.smallText}
 									color={colors?.white}
 								>
 									<strong>{value.boldText}</strong> {value.text}
@@ -64,7 +65,9 @@ const MissionVision = () => {
 						))
 					) : (
 						<Box>
-							<NormalText mb='1rem'>{currentItem?.dataList?.title}</NormalText>
+							<NormalText fontSize={responsive?.smallText} mb='1rem'>
+								{currentItem?.dataList?.title}
+							</NormalText>
 							<Flex maxW='full' maxH='80vh' overflow='hidden'>
 								<Image
 									w='full'
