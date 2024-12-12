@@ -582,16 +582,17 @@ export const data = {
 		],
 		footerLinks: [
 			{
-				text: 'Partners & Alliances',
-				link: '/',
+				text: 'Careers',
+				link: '#career',
 			},
 			{
-				text: 'Careers',
-				link: '/',
+				text: 'Partners & Alliances',
+				link: '#partner',
 			},
+
 			{
 				text: 'Contact Us',
-				link: '/',
+				link: '#contact',
 			},
 		],
 		followText: {

@@ -16,7 +16,7 @@ const FooterLink: FC<FooterLinkProps> = ({ ...props }) => {
 			{footer?.footerLinks?.map((item: any, i: number) => (
 				<Link href={item?.link} key={i}>
 					<NormalText
-						mx={'1rem'}
+						mx={{ base: 1, md: '1rem' }}
 						transition='.3s'
 						color={colors?.lightWhite}
 						_hover={{ color: colors?.white }}
