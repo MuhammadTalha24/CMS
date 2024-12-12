@@ -5,6 +5,7 @@ import { Box, BoxProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 import { data } from '@/lib/config/data';
 import { useColors } from '@/hooks';
+import { responsive } from '@/lib/config/constants';
 
 const style = {
 	position: 'absolute',
@@ -21,7 +22,7 @@ const CareerSection: FC<CareerSectionProps> = ({ ...props }) => {
 	const { colors } = useColors();
 	return (
 		<Box ml={{ base: '10%', md: '20%', lg: '40%' }} {...props}>
-			<Heading fontSize='3rem' mb='1rem' fontWeight='bold'>
+			<Heading fontSize={responsive?.bigTitle} mb='1rem' fontWeight='bold'>
 				{career?.title}
 			</Heading>
 			<Box
@@ -31,7 +32,7 @@ const CareerSection: FC<CareerSectionProps> = ({ ...props }) => {
 				py='0.1rem'
 			>
 				{career?.textList?.map((item: any, i: number) => (
-					<NormalText fontSize='1.2rem' my='1rem' key={i}>
+					<NormalText fontSize={responsive?.text} my='1rem' key={i}>
 						{item}
 					</NormalText>
 				))}

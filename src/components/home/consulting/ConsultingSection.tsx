@@ -5,6 +5,7 @@ import {
 	SectionPadding,
 } from '@/components';
 import { useColors } from '@/hooks';
+import { responsive } from '@/lib/config/constants';
 
 import { data } from '@/lib/config/data';
 import { Box, BoxProps } from '@chakra-ui/react';
@@ -20,13 +21,10 @@ const ConsultingSection: React.FC<ConsultingSectionProps> = ({ ...props }) => {
 	return (
 		<Box {...props} py='2rem'>
 			<SectionPadding pb='3rem' bg={colors?.black}>
-				<Heading
-					fontSize={{ base: '1.5rem', md: '2rem', xl: '3rem' }}
-					fontWeight='700'
-				>
+				<Heading fontSize={responsive?.bigTitle} fontWeight='700' mb='1rem'>
 					{consultingSlider?.title}
 				</Heading>
-				<NormalText fontSize={{ base: '1rem', xl: '1.5rem' }}>
+				<NormalText fontSize={responsive?.text}>
 					{consultingSlider?.description}
 				</NormalText>
 			</SectionPadding>

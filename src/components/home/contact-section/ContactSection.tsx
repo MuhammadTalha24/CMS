@@ -20,7 +20,7 @@ const ContactSection = () => {
 	return (
 		<Box>
 			<Grid gridTemplateColumns={{ base: '1fr', xl: '1fr 1fr' }}>
-				<Box pb='3rem'>
+				<Box pb='3rem' pr={4}>
 					<Heading fontSize={{ base: '1.2rem', lg: '3rem' }} fontWeight='700'>
 						{contact?.touch?.title}
 					</Heading>

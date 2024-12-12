@@ -5,6 +5,7 @@ import { FlexCenter, NormalText } from '@/components';
 import Link from 'next/link';
 import { useColors } from '@/hooks';
 import { data } from '@/lib/config/data';
+import { responsive } from '@/lib/config/constants';
 
 type FooterLinkProps = FlexProps & {};
 const FooterLink: FC<FooterLinkProps> = ({ ...props }) => {
@@ -19,6 +20,7 @@ const FooterLink: FC<FooterLinkProps> = ({ ...props }) => {
 						transition='.3s'
 						color={colors?.lightWhite}
 						_hover={{ color: colors?.white }}
+						fontSize={responsive?.smallText}
 					>
 						{item?.text}
 					</NormalText>
