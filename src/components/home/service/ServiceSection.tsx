@@ -6,6 +6,7 @@ import { Heading, NormalText, PrimaryButton } from '@/components';
 import { data } from '@/lib/config/data';
 
 import { useColors } from '@/hooks';
+import { responsive } from '@/lib/config/constants';
 
 type ServiceSectionProps = BoxProps & {
 	children?: ReactNode;
@@ -21,7 +22,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({}) => {
 	const TEMPLATE_COLUMNS = {
 		base: '1fr',
 		md: '1fr 1fr',
-		lg: 'repeat(3, 1fr)',
+		xl: 'repeat(3, 1fr)',
 		'2xl': 'repeat(4, 1fr)',
 	};
 
@@ -35,7 +36,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({}) => {
 	return (
 		<Box>
 			<Heading
-				fontSize={{ base: '1.2rem', md: '2rem', lg: '3rem' }}
+				fontSize={responsive?.bigTitle}
 				fontWeight='700'
 				pb='2rem'
 				mb='1rem'

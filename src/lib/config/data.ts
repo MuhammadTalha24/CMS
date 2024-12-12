@@ -171,8 +171,7 @@ export const data = {
 			image: '/slider/one.jpg',
 		},
 		two: {
-			heading:
-				'Robotics Process Automation: Robotic Process Automation (RPA) services can include',
+			heading: 'Robotics Process Automation: Robotic Process Automation (RPA)',
 			image: '/slider/two.jpg',
 			textlist: [
 				'Consulting: Helps identify opportunities for automation and overcome challenges.',

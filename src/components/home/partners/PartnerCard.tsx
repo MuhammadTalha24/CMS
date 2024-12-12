@@ -24,7 +24,7 @@ const PartnerCard: FC<PartnerCardProps> = ({ data, ...props }) => {
 
 	return (
 		<Box
-			h='300px'
+			h={{ base: 'auto', xl: '300px' }}
 			px='2rem'
 			py='4rem'
 			bg={colors?.dark}

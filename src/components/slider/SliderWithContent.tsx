@@ -143,13 +143,13 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 								<Box
 									zIndex={zIndex?.hero}
 									position='absolute'
-									w={{ base: '90%', xl: '70%' }}
+									w={{ base: '90%', xl: '80%', '2xl': '70%' }}
 									top='50%'
 									left='50%'
 									transform={'translate(-50%, -50%)'}
 								>
 									<Heading
-										fontSize={{ base: '1.2rem', md: '2rem', lg: '2.5rem' }}
+										fontSize={{ base: '1.2rem', md: '2rem', '2xl': '2.5rem' }}
 										fontWeight='600'
 										color={colors?.white}
 										textAlign={'center'}

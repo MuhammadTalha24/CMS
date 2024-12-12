@@ -6,6 +6,7 @@ import { Heading, NormalText } from '@/components';
 import { data } from '@/lib/config/data';
 
 import { PartnerCard } from '@/components';
+import { responsive } from '@/lib/config/constants';
 
 type PartnerSectionProps = BoxProps & {
 	children?: ReactNode;
@@ -17,19 +18,16 @@ const PartnerSection: FC<PartnerSectionProps> = ({}) => {
 	return (
 		<Box>
 			<Box pb='2.5rem'>
-				<Heading
-					fontSize={{ base: '1.5rem', md: '2rem', xl: '3rem' }}
-					fontWeight='700'
-				>
+				<Heading fontSize={responsive?.bigTitle} fontWeight='700' mb='1rem'>
 					{partnersSection?.title}
 				</Heading>
-				<NormalText fontSize={{ base: '1rem', xl: '1.5rem' }}>
+				<NormalText fontSize={responsive?.text}>
 					{partnersSection?.description}
 				</NormalText>
 			</Box>
 			<Grid gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}>
 				<PartnerCard data={partnersSection?.firstColumn} />
-				<Flex bg='red' w='full' h='300px'>
+				<Flex bg='red' w='full' h={{ base: 'auto', xl: '300px' }}>
 					<Image
 						w='full'
 						h='auto'
