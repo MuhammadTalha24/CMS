@@ -72,7 +72,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 
 	const settings = {
 		centerMode: true,
-		centerPadding: '300px',
+		centerPadding: '200px',
 		autoplay: true,
 		autoplaySpeed: 3000,
 		pauseOnHover: true,
@@ -123,7 +123,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 	};
 
 	return (
-		<Box overflowX='hidden' h='full' w='full' mt='80px'>
+		<Box overflowX='hidden' h='full' w='full'>
 			<SlickSlider ref={sliderRef} {...settings}>
 				{valuesMap.map((item, index) => (
 					<Box key={index} px='20px' overflow='hidden'>

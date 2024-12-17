@@ -273,19 +273,19 @@ export const data = {
 				title: 'Our OEM Partners',
 				description:
 					'We collaborate with leading Original Equipment Manufacturers (OEMs) to provide our clients with world-class solutions. Our partnerships include global technology giants in cloud computing cybersecurity, hardware, and software, ensuring our customers receive the best-in-class tools and platforms to support their growth.',
-				color: '#E3062A',
+				color: '#80c4e9',
 			},
 			{
 				title: 'Our Customer',
 				description:
 					'Our customers span industries such as Banking, Telecommunications, Government, Healthcare, Pharmaceuticals, and Medium and Large Enterprises. By delivering tailored solutions, we help our clients tackle complex challenges, streamline operations, and achieve their business objectives.',
-				color: '#0041f0',
+				color: '#c4d7ff',
 			},
 			{
 				title: 'Corporate Sustainability',
 				description:
 					'Tech Novelty is committed to corporate sustainability by integrating environmental, social, and governance (ESG) principles into our operations. We prioritize reducing our carbon footprint, supporting community development, and promoting diversity and inclusion in the workplace. By embedding sustainability into our DNA, we aim to create a positive impact on society and the environment.',
-				color: '#460073',
+				color: '#86d290',
 			},
 		],
 	},
@@ -554,11 +554,11 @@ export const data = {
 					},
 					{
 						text: 'About',
-						link: '/',
+						link: '#about',
 					},
 					{
-						text: 'Products',
-						link: '/',
+						text: 'Mission & Vission',
+						link: '#mission',
 					},
 				],
 			},
@@ -567,15 +567,15 @@ export const data = {
 				links: [
 					{
 						text: 'Services',
-						link: '/',
+						link: '#service',
 					},
 					{
 						text: 'Consulting',
-						link: '/',
+						link: '#consulting',
 					},
 					{
 						text: 'Industries',
-						link: '/',
+						link: '#industries',
 					},
 				],
 			},
@@ -603,17 +603,17 @@ export const data = {
 			{
 				iconName: 'facebook',
 				color: '#fff',
-				link: '/wwww.facebook.com',
+				link: 'wwww.facebook.com',
 			},
 			{
 				iconName: 'linkedin',
 				color: '#fff',
-				link: '/wwww.linkedin.com',
+				link: 'wwww.linkedin.com',
 			},
 			{
 				iconName: 'twitter',
 				color: '#fff',
-				link: '/wwww.twitter.com',
+				link: 'wwww.twitter.com',
 			},
 		],
 		copyrightText: '© thinkcrypt.io All right reserved.',

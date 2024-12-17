@@ -25,7 +25,7 @@ const FooterColumnLinks: FC<FooterColumnLinksProps> = ({ data, ...props }) => {
 			<Heading fontSize='1.2rem' mb='1.2rem'>
 				{data?.title}
 			</Heading>
-			<FlexColumn>
+			<FlexColumn alignItems={{ base: 'center', xl: 'flex-start' }}>
 				{data?.links?.map((links: any, i: number) => (
 					<Link key={i} href={links?.link}>
 						<NormalText

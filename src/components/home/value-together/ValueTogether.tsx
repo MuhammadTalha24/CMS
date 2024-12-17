@@ -4,6 +4,7 @@ import React, { FC, ReactNode } from 'react';
 import { Heading, NormalText } from '@/components';
 import { data } from '@/lib/config/data';
 import { responsive } from '@/lib/config/constants';
+import { useColors } from '@/hooks';
 
 const TEMPLATE_COLUMNS = {
 	base: '1fr',
@@ -16,6 +17,7 @@ type ValueTogetherProps = BoxProps & {
 };
 const ValueTogether: FC<ValueTogetherProps> = ({}) => {
 	const { valueTogether } = data;
+	const { colors } = useColors();
 	return (
 		<Box>
 			<Heading
@@ -32,11 +34,15 @@ const ValueTogether: FC<ValueTogetherProps> = ({}) => {
 						<Heading
 							fontSize={{ base: '1.25rem', lg: '1.5rem' }}
 							fontWeight='600'
+							color={colors?.black}
 							mb={2}
 						>
 							{item?.title}
 						</Heading>
-						<NormalText fontSize={{ base: '.875rem', md: '1rem' }}>
+						<NormalText
+							color={colors?.black}
+							fontSize={{ base: '.875rem', md: '1rem' }}
+						>
 							{item?.description}
 						</NormalText>
 					</Box>

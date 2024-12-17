@@ -1,6 +1,7 @@
 'use client';
 import {
 	FlexImage,
+	HeaderContainer,
 	Heading,
 	Icon,
 	IconContainer,
@@ -45,19 +46,7 @@ const Header: FC<HeaderProps> = () => {
 	}, [activeDropdown]);
 
 	return (
-		<Flex
-			w='full'
-			h='80px'
-			flexDirection='column'
-			justifyContent='center'
-			bg={colors?.black}
-			boxShadow='md'
-			position='fixed'
-			top='0'
-			left='0'
-			zIndex={zIndex.header}
-			// bg='red'
-		>
+		<HeaderContainer>
 			<SectionPadding>
 				<Flex alignItems='center'>
 					<Center
@@ -96,7 +85,6 @@ const Header: FC<HeaderProps> = () => {
 									<Heading fontSize='1.2rem' mr='.5rem'>
 										{item.name}
 									</Heading>
-
 									{item.dropdown && (
 										<>
 											{activeDropdown === item.name ? (
@@ -167,7 +155,7 @@ const Header: FC<HeaderProps> = () => {
 					</Flex>
 				</Flex>
 			</SectionPadding>
-		</Flex>
+		</HeaderContainer>
 	);
 };
 

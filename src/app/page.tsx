@@ -3,7 +3,7 @@ import {
 	CareerSection,
 	ConsultingSection,
 	ContactSection,
-	IconSection,
+	AboutSection,
 	IndustriesFaq,
 	LeadershipSection,
 	MissionVision,
@@ -18,6 +18,9 @@ import { useColors } from '@/hooks';
 import { data } from '@/lib/config/data';
 import { BoxProps } from '@chakra-ui/react';
 import { ReactNode } from 'react';
+
+const scrollTop = { scrollMarginTop: '100px' };
+const scrollTopMission = { scrollMarginTop: '200px' };
 
 const careerStyle = {
 	background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/career/one.jpg")`,
@@ -34,13 +37,13 @@ const Page = () => {
 		<PageLayout>
 			<SliderWithContent sliderData={data?.hero} />
 			<Wrapper>
-				<IconSection data={aboutSection} />
+				<AboutSection data={aboutSection} id='about' style={scrollTop} />
 			</Wrapper>
 			<Wrapper>
 				<LeadershipSection order={true} data={leadershipSection} />
 			</Wrapper>
 			<SectionPadding py={'3rem'} bg={colors?.black}>
-				<MissionVision />
+				<MissionVision id='mission' style={scrollTopMission} />
 			</SectionPadding>
 			<SectionPadding
 				py={'3rem'}
@@ -50,29 +53,29 @@ const Page = () => {
 				<ValueTogether />
 			</SectionPadding>
 			<SectionPadding py={'3rem'} bg={colors?.black}>
-				<ServiceSection />
+				<ServiceSection style={scrollTop} id='service' />
 			</SectionPadding>
-			<ConsultingSection />
+			<ConsultingSection id='consulting' style={scrollTop} />
 			<SectionPadding py={'3rem'} bg={colors?.black}>
-				<IndustriesFaq />
+				<IndustriesFaq id='industries' style={scrollTop} />
 			</SectionPadding>
 			<SectionPadding py={'6rem'} style={careerStyle} id='career'>
 				<CareerSection />
 			</SectionPadding>
-			<SectionPadding py={'3rem'} id='partner'>
+			<SectionPadding py={'3rem'} id='partner' style={scrollTop}>
 				<PartnerSection />
 			</SectionPadding>
 			<SectionPadding
 				py={'3rem'}
 				background={`linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 4, 39, 0.9))`}
 				id='contact'
+				style={scrollTop}
 			>
 				<ContactSection />
 			</SectionPadding>
 		</PageLayout>
 	);
 };
-
 export default Page;
 
 const Wrapper = ({
