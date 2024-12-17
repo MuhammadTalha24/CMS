@@ -1,4 +1,4 @@
-import { Footer, Header } from '@/components';
+import { Footer, HeaderAnimation } from '@/components';
 import { FC } from 'react';
 
 import { useColors } from '@/hooks';
@@ -10,7 +10,7 @@ const PageLayout: FC<LayoutProps> = ({ children, ...props }) => {
 	const { colors } = useColors();
 	return (
 		<Box bg={colors?.black} {...props}>
-			<Header />
+			<HeaderAnimation />
 			<Box minH={'80vh'}>{children}</Box>
 			<Footer />
 		</Box>
