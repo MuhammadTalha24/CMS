@@ -46,28 +46,28 @@ const DropdownItems: FC<DropdownItemsProps> = ({
 			<Box
 				position='absolute'
 				w='full'
-				// h='70vh'
-				h={activeDropdown === item.name ? '70vh' : '0vh'}
-				top={'100%'} // Move dropdown to position
-				visibility={activeDropdown === item.name ? 'visible' : 'hidden'}
+				h='70vh'
+				top={activeDropdown === item.name ? '100%' : '-75vh'} // Move dropdown to position
 				left='0'
 				bg={colors?.dark}
 				py='4rem'
 				zIndex={'11'}
-				transition='height 0.4s cubic-bezier(0.39, 0.64, 0.82, 0.39), visibility 0.4s' // Smooth transition effect
+				transition='top 0.6s ease-out' // Smooth transition effect
 			>
-				<Heading
-					fontSize='1.5rem'
-					fontWeight='600'
-					color={colors?.white}
-					px={{
-						base: padding.layoutPadding_X_Mobile,
-						lg: padding.layoutPadding_X,
-					}}
-					mb='1.5rem'
-				>
-					{`${item.name}`}
-				</Heading>
+				<Link href={item?.name.toLowerCase()}>
+					<Heading
+						fontSize='1.5rem'
+						fontWeight='600'
+						color={colors?.white}
+						px={{
+							base: padding.layoutPadding_X_Mobile,
+							lg: padding.layoutPadding_X,
+						}}
+						mb='1.5rem'
+					>
+						{`${item.name}`}
+					</Heading>
+				</Link>
 
 				<Box
 					style={{

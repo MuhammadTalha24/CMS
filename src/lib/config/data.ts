@@ -550,7 +550,7 @@ export const data = {
 				links: [
 					{
 						text: 'Home',
-						link: '#header',
+						link: '/',
 					},
 					{
 						text: 'About',

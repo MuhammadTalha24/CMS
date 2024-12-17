@@ -107,13 +107,13 @@ const HeaderAnimation: FC<HeaderAnimationProps> = () => {
 			</HeaderContainer>
 			{activeDropdown && (
 				<Box
-					position='absolute'
-					top='70vh'
+					position='fixed'
+					bottom='0'
 					left='0'
 					w='full'
-					h='100vh' /* Bottom 30vh area */
+					h='21.5vh'
 					onClick={handleOutsideClick} /* Handle clicks */
-					bg='transparent' /* Transparent click area */
+					/* Transparent click area */
 					zIndex='1099' /* Behind dropdown but above other elements */
 				/>
 			)}
