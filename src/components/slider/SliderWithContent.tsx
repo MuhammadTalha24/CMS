@@ -123,7 +123,7 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 	};
 
 	return (
-		<Box overflowX='hidden' h='full' w='full' mt='80px'>
+		<Box overflowX='hidden' h='full' w='full'>
 			<SlickSlider ref={sliderRef} {...settings}>
 				{valuesMap.map((item, index) => (
 					<Box key={index} px='20px' overflow='hidden'>
