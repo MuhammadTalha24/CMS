@@ -57,6 +57,7 @@ const Header: FC<HeaderProps> = () => {
 			left='0'
 			zIndex={zIndex.header}
 			// bg='red'
+			id='header'
 		>
 			<SectionPadding>
 				<Flex alignItems='center'>
