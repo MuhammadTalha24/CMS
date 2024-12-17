@@ -1,16 +1,18 @@
 'use client';
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
+import { Box, BoxProps, Flex, Grid, Image, Text } from '@chakra-ui/react';
 
 import { FlexColumn, IndustryHeading } from '@/components';
 import { NormalText } from '@/components/text';
 import { useColors } from '@/hooks';
 import { fonts } from '@/hooks/useFont';
 import { data } from '@/lib/config/data';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { responsive } from '@/lib/config/constants';
 
-const MissionVision = () => {
+type MissionVisionProps = BoxProps & {};
+
+const MissionVision: FC<MissionVisionProps> = ({ ...props }) => {
 	const { missionVision } = data;
 	const { colors } = useColors();
 	const [currentItem, setCurrentItem] = useState<any>({
@@ -22,7 +24,7 @@ const MissionVision = () => {
 		},
 	});
 	return (
-		<Box h={'auto'} overflow='hidden' position='relative'>
+		<Box h={'auto'} overflow='hidden' position='relative' {...props}>
 			<IndustryHeading mb={{ base: '1rem', md: '4rem' }} />
 			<Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
 				<FlexColumn>

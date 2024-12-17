@@ -12,7 +12,7 @@ type ServiceSectionProps = BoxProps & {
 	children?: ReactNode;
 };
 
-const ServiceSection: FC<ServiceSectionProps> = ({}) => {
+const ServiceSection: FC<ServiceSectionProps> = ({ ...props }) => {
 	const { serviceSection } = data;
 	const [visibleItems, setVisibleItems] = useState(4);
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -34,7 +34,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({}) => {
 		}
 	};
 	return (
-		<Box>
+		<Box {...props}>
 			<Heading
 				fontSize={responsive?.bigTitle}
 				fontWeight='700'
