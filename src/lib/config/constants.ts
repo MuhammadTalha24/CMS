@@ -46,9 +46,9 @@ export const cartDisplayButtonWidth = '560px';
 export const placeholderImage = '/product/placeholderImage.jpg';
 
 export const zIndex = {
-	header: '333',
-	headerDropdown: '222',
-	hero: '111',
+	header: '999',
+	headerDropdown: '888',
+	hero: '777',
 };
 
 export const responsive = {
