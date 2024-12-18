@@ -11,35 +11,35 @@ export const data = {
 				dropdown: [
 					{
 						name: 'About tech.novelty solutions',
-						link: '/',
+						link: '/about/tech-novelty',
 					},
 					{
 						name: 'Leadership',
-						link: '/',
+						link: '/about/leadership',
 					},
 					{
 						name: 'Company vision',
-						link: '/',
+						link: '/about/vission',
 					},
 					{
 						name: 'Company mission',
-						link: '/',
+						link: '/about/mission',
 					},
 					{
 						name: 'Company values',
-						link: '/',
+						link: '/about/values',
 					},
 					{
 						name: 'Our OEM Partners',
-						link: '/',
+						link: '/about/partners',
 					},
 					{
 						name: 'Our Customers',
-						link: '/',
+						link: '/about/customer',
 					},
 					{
 						name: 'Corporate Sustainability',
-						link: '/',
+						link: '/about/sustain',
 					},
 				],
 			},
@@ -49,11 +49,11 @@ export const data = {
 				dropdown: [
 					{
 						name: 'Microsoft Dynamics 365',
-						link: '/',
+						link: '/products/microsoft',
 					},
 					{
 						name: 'Oracle AML/ALM',
-						link: '/about',
+						link: '/products/oracle',
 					},
 				],
 			},
@@ -62,48 +62,48 @@ export const data = {
 				dropdown: [
 					{
 						name: 'Infrastructure Solutions',
-						link: '/',
+						link: '/services/infrastructure',
 					},
 					{
 						name: 'Managed Services',
-						link: '/',
+						link: '/services/managed',
 					},
 					{
 						name: 'Intelligent Network Solutions',
-						link: '/',
+						link: '/services/intelligent',
 					},
 					{
 						name: 'Backup and Recovery Solutions',
-						link: '/',
+						link: '/services/backup',
 					},
 					{
 						name: 'Digital Transformation',
-						link: '/',
+						link: '/services/digital',
 					},
 					{
 						name: 'Cybersecurity Assurance',
-						link: '/',
+						link: '/services/cybersecurity',
 					},
 					{
 						name: 'Data Analytics & Insights',
-						link: '/',
+						link: '/services/data-analytics',
 					},
 
 					{
 						name: 'AI/ML Solutions',
-						link: '/',
+						link: '/services/aiml',
 					},
 					{
 						name: 'Emerging Technologies and IoT',
-						link: '/',
+						link: '/services/emerging',
 					},
 					{
 						name: 'Smart Office Solutions',
-						link: '/',
+						link: '/services/smart',
 					},
 					{
 						name: 'AML/ALM Solutions',
-						link: '/',
+						link: '/services/aml-alm',
 					},
 				],
 			},
@@ -112,27 +112,27 @@ export const data = {
 				dropdown: [
 					{
 						name: 'IT Strategy & Planning',
-						link: '/',
+						link: '/consulting/it-strategy',
 					},
 					{
 						name: 'Cloud Computing Solutions',
-						link: '/',
+						link: '/consulting/cloud-computing',
 					},
 					{
 						name: 'IT Governance & Compliance',
-						link: '/',
+						link: '/consulting/it-governance',
 					},
 					{
 						name: 'Application Design & Deployment',
-						link: '/',
+						link: '/consulting/application-design',
 					},
 					{
 						name: 'Enterprise Resource Planning',
-						link: '/',
+						link: '/consulting/enterprise-resource',
 					},
 					{
 						name: 'Project Management ',
-						link: '/',
+						link: '/consulting/project-management',
 					},
 				],
 			},
@@ -141,23 +141,23 @@ export const data = {
 				dropdown: [
 					{
 						name: 'Banking & NBFIs',
-						link: '/',
+						link: '/industries/banking',
 					},
 					{
 						name: 'Telecommunication',
-						link: '/',
+						link: '/industries/telecommunication',
 					},
 					{
 						name: 'Government',
-						link: '/',
+						link: '/industries/government',
 					},
 					{
 						name: 'Health & Pharmaceuticals',
-						link: '/',
+						link: '/industries/health',
 					},
 					{
 						name: 'Medium and Large Enterprises',
-						link: '/',
+						link: '/industries/medium',
 					},
 				],
 			},
@@ -227,7 +227,7 @@ export const data = {
 				dataList: {
 					title:
 						'To be a global leader in IT solutions, empowering businesses to achieve their full potential through innovation and technology.',
-					image: '/rainbow.jpg',
+					image: '/about/vission/one.jpg',
 				},
 			},
 			{
@@ -235,7 +235,7 @@ export const data = {
 				dataList: {
 					title:
 						"To deliver cutting-edge solutions that address our clients' challenges, foster growth, and create value for all stakeholders.",
-					image: '/rainbowTwo.jpg',
+					image: '/about/mission/one.jpg',
 				},
 			},
 			{
@@ -400,7 +400,7 @@ export const data = {
 			},
 			three: {
 				title: 'Application Design & Deployment',
-				image: '/consultingSlider/one.jpg',
+				image: '/consultingSlider/three.jpg',
 				shortDescription:
 					'We provide end-to-end services for developing and deploying business applications. This includes:',
 				textList: [
@@ -411,7 +411,7 @@ export const data = {
 			},
 			four: {
 				title: 'Enterprise Resource Planning (ERP)',
-				image: '/consultingSlider/two.jpg',
+				image: '/consultingSlider/four.jpg',
 				shortDescription:
 					'We help businesses implement and optimize ERP systems to integrate and manage their operations. Our services include:',
 				textList: [
@@ -422,7 +422,7 @@ export const data = {
 			},
 			five: {
 				title: 'Project Management',
-				image: '/consultingSlider/one.jpg',
+				image: '/consultingSlider/five.jpg',
 				shortDescription:
 					'We deliver expert project management services to ensure the success of your IT initiatives. This includes:',
 				textList: [
@@ -433,7 +433,7 @@ export const data = {
 			},
 			six: {
 				title: 'Cloud Computing Solutions',
-				image: '/consultingSlider/two.jpg',
+				image: '/consultingSlider/six.jpg',
 				shortDescription:
 					'We design and implement cloud strategies that transform businesses. Our services include:',
 				textList: [
@@ -617,5 +617,54 @@ export const data = {
 			},
 		],
 		copyrightText: '© thinkcrypt.io All right reserved.',
+	},
+
+	pages: {
+		heading: {
+			title: 'Company Vision, Mission, and Values',
+		},
+		vission: {
+			name: 'Vision',
+			description:
+				'To be a global leader in IT solutions, empowering businesses to achieve their full potential through innovation and technology.',
+		},
+		mission: {
+			name: 'Mission',
+			description:
+				"To deliver cutting-edge solutions that address our clients' challenges, foster growth, and create value for all stakeholders.",
+		},
+		values: {
+			name: 'Values',
+			dataList: [
+				{
+					boldText: 'Customer-Centricity:',
+					text: 'We put our customers at the heart of everything we do, ensuring their needs guide our innovation and solutions.',
+				},
+				{
+					boldText: 'Loyalty:',
+					text: 'We are dedicated to building lasting relationships with our customers, employees, and partners, valuing trust and mutual growth.',
+				},
+				{
+					boldText: 'Integrity:',
+					text: 'We act with honesty, transparency, and accountability, earning the trust of our clients and partners.',
+				},
+				{
+					boldText: 'Collaboration:',
+					text: 'We believe in the power of teamwork, leveraging diverse skills and perspectives to achieve collective goals.',
+				},
+				{
+					boldText: 'Kind to Nature:',
+					text: 'We are committed to minimizing our environmental impact and promoting sustainability. By adopting eco-friendly practices and leveraging technology for greener solutions, we aim to protect the planet while driving innovation. Tech Novelty believes in creating a balance between progress and preserving nature for future generations.',
+				},
+			],
+		},
+		products: [
+			{
+				title: 'Microsoft Dynamic 365',
+			},
+			{
+				title: 'Oracle AML/ALM',
+			},
+		],
 	},
 };

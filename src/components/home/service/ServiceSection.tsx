@@ -48,11 +48,48 @@ const ServiceSection: FC<ServiceSectionProps> = ({ ...props }) => {
 				{serviceSection?.cardData
 					?.slice(0, visibleItems)
 					.map((item: any, i: number) => (
+						// <Box
+						// 	key={i}
+						// 	p='2rem'
+						// 	borderRadius={2}
+						// 	background={`linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${item?.image})`}
+						// 	backgroundPosition='center center'
+						// 	backgroundRepeat='no-repeat'
+						// 	backgroundSize='cover'
+						// 	minH='400px'
+						// 	onMouseEnter={() => setHoveredIndex(i)} // Track the index of the hovered card
+						// 	onMouseLeave={() => setHoveredIndex(null)}
+						// 	position='relative' // Add relative positioning to handle pseudo-elements properly
+						// 	cursor='pointer'
+						// 	transition='.3s'
+						// 	_before={{
+						// 		content: '""',
+						// 		position: 'absolute',
+						// 		top: 0,
+						// 		left: 0,
+						// 		right: 0,
+						// 		bottom: 0,
+						// 		borderRadius: 'inherit',
+						// 		padding: '2px', // To create the space for the gradient border
+						// 		background:
+						// 			hoveredIndex === i
+						// 				? 'linear-gradient(90deg, #0074c7 0%, #B886CB 100%)'
+						// 				: 'transparent',
+						// 		WebkitMask:
+						// 			'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+						// 		maskComposite: 'exclude',
+						// 		zIndex: 1,
+						// 	}}
+						// >
 						<Box
 							key={i}
 							p='2rem'
 							borderRadius={2}
-							background={`linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${item?.image})`}
+							background={
+								hoveredIndex === i
+									? `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(${item?.image})`
+									: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(${item?.image})`
+							}
 							backgroundPosition='center center'
 							backgroundRepeat='no-repeat'
 							backgroundSize='cover'
@@ -61,7 +98,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ ...props }) => {
 							onMouseLeave={() => setHoveredIndex(null)}
 							position='relative' // Add relative positioning to handle pseudo-elements properly
 							cursor='pointer'
-							transition='.3s'
+							transition='all .3s'
 							_before={{
 								content: '""',
 								position: 'absolute',

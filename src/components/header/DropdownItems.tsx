@@ -18,10 +18,11 @@ const DropdownItems: FC<DropdownItemsProps> = ({
 	handleToggle,
 	activeDropdown,
 	setActiveDropdown,
+	...props
 }) => {
 	const { colors } = useColors();
 	return (
-		<Box>
+		<Box {...props}>
 			<Flex
 				alignItems='center'
 				cursor='pointer'
@@ -49,12 +50,13 @@ const DropdownItems: FC<DropdownItemsProps> = ({
 				h='70vh'
 				top={activeDropdown === item.name ? '100%' : '-75vh'} // Move dropdown to position
 				left='0'
-				bg={colors?.dark}
+				bg={colors?.black}
+				opacity='.8'
 				py='4rem'
 				zIndex={'11'}
 				transition='top 0.6s ease-out' // Smooth transition effect
 			>
-				<Link href={item?.name.toLowerCase()}>
+				<Link href={`/${item?.name.toLowerCase()}`}>
 					<Heading
 						fontSize='1.5rem'
 						fontWeight='600'

@@ -2,11 +2,11 @@ import { useColors, usefont } from '@/hooks';
 import { Text, TextProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 
-type NormalTextProps = TextProps & {
+type HeadngProps = TextProps & {
 	children: string | number;
 };
 
-const NormalText: FC<NormalTextProps> = ({ children, ...props }) => {
+const Headng: FC<HeadngProps> = ({ children, ...props }) => {
 	const { fonts } = usefont();
 	const { colors } = useColors();
 	return (
@@ -22,4 +22,4 @@ const NormalText: FC<NormalTextProps> = ({ children, ...props }) => {
 	);
 };
 
-export default NormalText;
+export default Headng;

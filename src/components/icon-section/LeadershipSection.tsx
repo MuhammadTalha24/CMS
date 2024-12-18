@@ -1,7 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Grid, GridProps, TextProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
-import { FlexColumn, FlexImage, Heading, NormalText } from '@/components';
+import {
+	FlexColumn,
+	FlexImage,
+	Heading,
+	LearnMoreBtn,
+	NormalText,
+} from '@/components';
 import { responsive } from '@/lib/config/constants';
 
 type LeadershipSectionProps = GridProps & {
@@ -33,6 +39,8 @@ const LeadershipSection: FC<LeadershipSectionProps> = ({
 				>
 					{data?.description}
 				</NormalText>
+
+				<LearnMoreBtn href='/about/leadership'>Learn More</LearnMoreBtn>
 			</FlexColumn>
 		</Grid>
 	);

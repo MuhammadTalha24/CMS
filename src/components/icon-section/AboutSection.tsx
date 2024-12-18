@@ -1,7 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Grid, GridProps } from '@chakra-ui/react';
+import { Box, Grid, GridProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
-import { FlexColumn, FlexImage, Heading, NormalText } from '@/components';
+import {
+	FlexColumn,
+	FlexImage,
+	Heading,
+	LearnMoreBtn,
+	NormalText,
+} from '@/components';
 import { responsive } from '@/lib/config/constants';
 
 type IconSectionProps = GridProps & {
@@ -29,6 +35,9 @@ const IconSection: FC<IconSectionProps> = ({ data, order, ...props }) => {
 				>
 					{data?.description}
 				</NormalText>
+				<Box mt='1rem'>
+					<LearnMoreBtn href='/about/tech-novelty'>Learn More</LearnMoreBtn>
+				</Box>
 			</FlexColumn>
 		</Grid>
 	);
