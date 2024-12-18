@@ -34,7 +34,7 @@ const Page = () => {
 	const { colors } = useColors();
 	const { aboutSection, leadershipSection } = data;
 	return (
-		<PageLayout>
+		<PageLayout isHomePage={true}>
 			<SliderWithContent sliderData={data?.hero} />
 			<Wrapper>
 				<AboutSection data={aboutSection} id='about' style={scrollTop} />
