@@ -20,7 +20,7 @@ const MissionVision: FC<MissionVisionProps> = ({ ...props }) => {
 		dataList: {
 			title:
 				'To be a global leader in IT solutions, empowering businesses to achieve their full potential through innovation and technology.',
-			image: '/rainbow.jpg',
+			image: '/about/vission/one.jpg',
 		},
 	});
 	return (

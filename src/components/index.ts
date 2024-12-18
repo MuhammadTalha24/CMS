@@ -16,3 +16,8 @@ export * from './home';
 export * from './footer';
 export * from './faq/index';
 export * from './menu-drawer/index';
+export * from './banner/index';
+export * from './services/index';
+export * from './consulting/index';
+export * from './industries/index';
+export * from './products/index';
