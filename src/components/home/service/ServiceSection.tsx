@@ -5,7 +5,7 @@ import React, { FC, ReactNode, useState } from 'react';
 import { Heading, NormalText, PrimaryButton } from '@/components';
 import { data } from '@/lib/config/data';
 
-import { useColors } from '@/hooks';
+import { useColors, usefont } from '@/hooks';
 import { responsive } from '@/lib/config/constants';
 
 type ServiceSectionProps = BoxProps & {
@@ -18,6 +18,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ ...props }) => {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 	const isShowingAll = visibleItems === serviceSection?.cardData?.length;
 	const { colors } = useColors();
+	const { fonts } = usefont();
 
 	const TEMPLATE_COLUMNS = {
 		base: '1fr',
@@ -84,6 +85,7 @@ const ServiceSection: FC<ServiceSectionProps> = ({ ...props }) => {
 								fontSize={{ base: '1.25rem', lg: '1.5rem' }}
 								fontWeight='600'
 								mb={4}
+								fontFamily={fonts.OpenSans}
 							>
 								{item?.title}
 							</Heading>

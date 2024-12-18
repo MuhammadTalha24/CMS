@@ -19,16 +19,20 @@ const TEMPLATE_COLUMNS = {
 
 type FooterProps = GridProps & {
 	image?: string;
+	isHomePage?: boolean;
 };
 
-const Footer: FC<FooterProps> = ({}) => {
+const Footer: FC<FooterProps> = ({ isHomePage }) => {
 	const { footer } = data;
 	const { colors } = useColors();
 	return (
 		<Box>
-			<SectionWrapper backgroundColor={colors?.primary}>
-				<FooterLink />
-			</SectionWrapper>
+			{isHomePage && (
+				<SectionWrapper backgroundColor={colors?.primary}>
+					<FooterLink />
+				</SectionWrapper>
+			)}
+
 			<SectionWrapper py='3rem' backgroundColor={colors?.primary}>
 				<Grid gridTemplateColumns={TEMPLATE_COLUMNS}>
 					<Flex
