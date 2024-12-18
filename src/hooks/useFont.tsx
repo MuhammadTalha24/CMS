@@ -3,6 +3,7 @@ export const fonts = {
 	NibProSemiBold: 'var(--font-nibpro-semi-bold)',
 	NibProBold: 'var(--font-nibpro-bold)',
 	Poppins: '"Poppins", sans-serif',
+	OpenSans: '"Open Sans", serif',
 };
 
 const useCustomFont = () => {

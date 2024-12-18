@@ -3,13 +3,6 @@ import './globals.css';
 import Providers from './Providers';
 import localFont from 'next/font/local';
 
-import {Poppins} from 'next/font/google';
-
-const inter = Poppins({
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-})
-
 const NibProRegular = localFont({
 	src: './fonts/NibPro-Regular.ttf',
 	variable: '--font-nibpro-regular',
@@ -36,7 +29,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' className={inter.className}>
+		<html lang='en'>
 			<body
 				className={`${NibProRegular.variable} ${NibProSemiBold.variable} ${NibProBold.variable}`}
 			>

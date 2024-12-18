@@ -20,7 +20,7 @@ const MissionVision: FC<MissionVisionProps> = ({ ...props }) => {
 		dataList: {
 			title:
 				'To be a global leader in IT solutions, empowering businesses to achieve their full potential through innovation and technology.',
-			image: '/rainbow.jpg',
+			image: '/about/vission/one.jpg',
 		},
 	});
 	return (
@@ -52,12 +52,12 @@ const MissionVision: FC<MissionVisionProps> = ({ ...props }) => {
 					))}
 				</FlexColumn>
 
-				<FlexColumn alignItems='flex-end'>
+				<FlexColumn alignItems='flex-start'>
 					{currentItem && currentItem?.name === 'Values' ? (
 						currentItem.dataList.map((value: any, i: number) => (
 							<Box key={i} mb={2}>
 								<Text
-									fontFamily={fonts?.Poppins}
+									fontFamily={fonts?.OpenSans}
 									fontSize={responsive?.smallText}
 									color={colors?.white}
 								>

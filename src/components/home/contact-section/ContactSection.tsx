@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Heading, NormalText } from '@/components';
+import { Heading, NormalText, Watermark } from '@/components';
 import { Box, Grid, Text } from '@chakra-ui/react';
 import { data } from '@/lib/config/data';
 import { useColors, usefont } from '@/hooks';
+import { zIndex } from '@/lib/config/constants';
 
 const contactStyle = {
 	background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/contact/one.jpg")`,
@@ -18,9 +19,9 @@ const ContactSection = () => {
 	const { colors } = useColors();
 	const { fonts } = usefont();
 	return (
-		<Box>
+		<Box w='full' h='full'>
 			<Grid gridTemplateColumns={{ base: '1fr', xl: '1fr 1fr' }}>
-				<Box pb='3rem' pr={4}>
+				<Box pb='3rem' pr={4} position='relative' zIndex={zIndex?.contact}>
 					<Heading fontSize={{ base: '1.2rem', lg: '3rem' }} fontWeight='700'>
 						{contact?.touch?.title}
 					</Heading>
@@ -33,7 +34,7 @@ const ContactSection = () => {
 						{contact?.touch?.emai?.map((item: any, i: number) => (
 							<Text
 								key={i}
-								fontFamily={fonts?.Poppins}
+								fontFamily={fonts?.OpenSans}
 								fontSize='1rem'
 								color={colors?.white}
 								py='.4rem'
@@ -56,6 +57,8 @@ const ContactSection = () => {
 						<NormalText>{contact?.touch?.address?.officeName}</NormalText>
 						<NormalText>{contact?.touch?.address?.address}</NormalText>
 					</Box>
+
+					<Watermark />
 				</Box>
 				<Box>
 					<Box

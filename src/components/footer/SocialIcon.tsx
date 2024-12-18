@@ -13,7 +13,7 @@ type SocialIconProps = {
 };
 const SocialIcon: FC<SocialIconProps> = ({ item }) => {
 	return (
-		<Link href={item?.link}>
+		<Link href={item?.link} target='_blank'>
 			<Box mx='.5rem'>
 				<Icon size={24} name={item?.iconName} color={item?.color} />
 			</Box>
