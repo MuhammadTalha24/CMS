@@ -49,6 +49,7 @@ export const zIndex = {
 	header: '999',
 	headerDropdown: '888',
 	hero: '777',
+	contact: '666',
 };
 
 export const responsive = {

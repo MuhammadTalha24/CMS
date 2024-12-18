@@ -34,7 +34,7 @@ const Page = () => {
 	const { colors } = useColors();
 	const { aboutSection, leadershipSection } = data;
 	return (
-		<PageLayout isHomePage={true}>
+		<PageLayout>
 			<SliderWithContent sliderData={data?.hero} />
 			<Wrapper>
 				<AboutSection data={aboutSection} id='about' style={scrollTop} />
@@ -67,10 +67,7 @@ const Page = () => {
 			</SectionPadding>
 			<SectionPadding
 				py={'3rem'}
-				bg={`linear-gradient(rgba(0, 0, 0, 0.8), rgba(8, 4, 39, 0.8)), url('watermark.png')`}
-				bgRepeat='no-repeat'
-				bgSize='contain'
-				bgPos='center'
+				background={`linear-gradient(rgba(0, 0, 0, 0.9), rgba(8, 4, 39, 0.9))`}
 				id='contact'
 				style={scrollTop}
 			>
