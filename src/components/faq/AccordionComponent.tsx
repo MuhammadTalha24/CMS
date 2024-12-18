@@ -23,7 +23,7 @@ const AccordionComponent: FC<AccordionComponentProps> = ({ data }) => {
 						cursor='pointer'
 						color={colors?.white}
 						py='1rem'
-						fontFamily={fonts?.NibPro}
+						fontFamily={fonts?.OpenSans}
 						fontSize={{ base: '1rem', lg: '1.25rem' }}
 					>
 						{item?.title}
@@ -31,7 +31,7 @@ const AccordionComponent: FC<AccordionComponentProps> = ({ data }) => {
 					<AccordionItemContent
 						color={colors?.white}
 						py='1rem'
-						fontFamily={fonts?.Poppins}
+						fontFamily={fonts?.OpenSans}
 						fontSize={{ base: '.875rem', lg: '1rem' }}
 					>
 						{item?.description}

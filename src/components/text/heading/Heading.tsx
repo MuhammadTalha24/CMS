@@ -14,7 +14,7 @@ const NormalText: FC<NormalTextProps> = ({ children, ...props }) => {
 			color={colors?.white}
 			fontWeight='400'
 			fontSize='1rem'
-			fontFamily={fonts?.NibPro}
+			fontFamily={fonts?.OpenSans}
 			{...props}
 		>
 			{children}

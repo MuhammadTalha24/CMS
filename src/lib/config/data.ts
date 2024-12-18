@@ -554,7 +554,7 @@ export const data = {
 					},
 					{
 						text: 'About',
-						link: '#about',
+						link: '/about',
 					},
 					{
 						text: 'Mission & Vission',
@@ -567,15 +567,15 @@ export const data = {
 				links: [
 					{
 						text: 'Services',
-						link: '#service',
+						link: '/services',
 					},
 					{
 						text: 'Consulting',
-						link: '#consulting',
+						link: '/consulting',
 					},
 					{
 						text: 'Industries',
-						link: '#industries',
+						link: '/industries',
 					},
 				],
 			},
@@ -603,17 +603,17 @@ export const data = {
 			{
 				iconName: 'facebook',
 				color: '#fff',
-				link: 'wwww.facebook.com',
+				link: 'https://www.facebook.com',
 			},
 			{
 				iconName: 'linkedin',
 				color: '#fff',
-				link: 'wwww.linkedin.com',
+				link: 'https://www.linkedin.com',
 			},
 			{
 				iconName: 'twitter',
 				color: '#fff',
-				link: 'wwww.twitter.com',
+				link: 'https://www.twitter.com',
 			},
 		],
 		copyrightText: '© thinkcrypt.io All right reserved.',

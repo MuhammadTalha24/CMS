@@ -18,7 +18,7 @@ const ContactSection = () => {
 	const { colors } = useColors();
 	const { fonts } = usefont();
 	return (
-		<Box>
+		<Box w='full' h='full'>
 			<Grid gridTemplateColumns={{ base: '1fr', xl: '1fr 1fr' }}>
 				<Box pb='3rem' pr={4}>
 					<Heading fontSize={{ base: '1.2rem', lg: '3rem' }} fontWeight='700'>
@@ -33,7 +33,7 @@ const ContactSection = () => {
 						{contact?.touch?.emai?.map((item: any, i: number) => (
 							<Text
 								key={i}
-								fontFamily={fonts?.Poppins}
+								fontFamily={fonts?.OpenSans}
 								fontSize='1rem'
 								color={colors?.white}
 								py='.4rem'
