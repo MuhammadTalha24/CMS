@@ -22,7 +22,7 @@ const IconSection: FC<IconSectionProps> = ({ data, order, ...props }) => {
 				<FlexImage
 					image={data?.icon}
 					mb={{ base: 12, md: 0 }}
-					h={{ base: 'full', lg: '90%', xl: '80%', '2xl': '70%' }}
+					h={{ base: 'full', md: '90%', lg: '80%', xl: '70%', '2xl': '60%' }}
 				/>
 			</Center>
 
