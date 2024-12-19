@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, Grid, GridProps, TextProps } from '@chakra-ui/react';
+import { Box, Center, Grid, GridProps, TextProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 import {
 	FlexColumn,
@@ -22,12 +22,13 @@ const LeadershipSection: FC<LeadershipSectionProps> = ({
 }) => {
 	return (
 		<Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={12} {...props}>
-			<FlexImage
-				order={order ? 2 : 1}
-				image={data?.icon}
-				mb={{ base: 12, md: 0 }}
-				h={{ base: 'full', '2xl': '90%' }}
-			/>
+			<Center order={order ? 2 : 1}>
+				<FlexImage
+					image={data?.icon}
+					mb={{ base: 12, md: 0 }}
+					h={{ base: 'full', lg: '90%', xl: '80%', '2xl': '70%' }}
+				/>
+			</Center>
 			<FlexColumn
 				order={order ? 1 : 2}
 				justifyContent={{ base: 'flex-start', md: 'center' }}
