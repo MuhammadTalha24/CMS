@@ -39,7 +39,7 @@ const MenuDrawer: FC<MenuDrawerProps> = ({ children, handleCheckout }) => {
 		<DrawerRoot placement={'start'} size={'xs'}>
 			<DrawerBackdrop />
 			<DrawerTrigger asChild>{children}</DrawerTrigger>
-			<DrawerContent bg={colors?.black}>
+			<DrawerContent bg={colors?.black} overflowY='scroll'>
 				<DrawerCloseTrigger color={colors?.white} />
 				<Flex mt={16}>
 					<Stack width='full' gap={0}>
