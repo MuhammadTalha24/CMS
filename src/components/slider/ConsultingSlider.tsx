@@ -1,56 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
-import { Heading, Icon, NormalText, Overlay } from '@/components';
+import { Heading, NormalText, Overlay } from '@/components';
 import { useColors } from '@/hooks';
 import { zIndex } from '@/lib/config/constants';
 // import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
-import { Box, Center, Image } from '@chakra-ui/react'; // If you're using Chakra UI
+import { Box, Image } from '@chakra-ui/react'; // If you're using Chakra UI
 import { FC, useRef } from 'react';
 import SlickSlider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
+import { responsiveConsultingSlider } from './responsive';
+import { NextButton, PrevButton } from './index';
 import 'slick-carousel/slick/slick.css';
-
-const PreviousButton = ({ onClick }: { onClick?: () => void }) => {
-	const { colors } = useColors();
-	return (
-		<Center
-			position='absolute'
-			top='50%'
-			left='80px'
-			transform='translateY(-50%)'
-			width='40px'
-			h='40px'
-			borderRadius='full'
-			bg={colors?.black}
-			zIndex={zIndex?.hero}
-			cursor='pointer'
-			onClick={onClick} // Pass onClick here
-		>
-			<Icon color={colors?.white} name='arrowLeft' />
-		</Center>
-	);
-};
-
-const NextButton = ({ onClick }: { onClick?: () => void }) => {
-	const { colors } = useColors();
-	return (
-		<Center
-			position='absolute'
-			top='50%'
-			right='80px'
-			transform='translateY(-50%)'
-			width='40px'
-			h='40px'
-			borderRadius='full'
-			bg={colors?.black}
-			zIndex={zIndex?.hero}
-			cursor='pointer'
-			onClick={onClick} // Pass onClick here
-		>
-			<Icon color={colors?.white} name='arrowRight' />
-		</Center>
-	);
-};
 
 type SliderItem = {
 	title: string;
@@ -85,47 +45,9 @@ const ConsultingSlider: FC<ConsultingSliderProps> = ({ sliderData }) => {
 		slidesToShow: 1,
 		infinite: true,
 		speed: 1500,
-		prevArrow: (
-			<PreviousButton onClick={() => sliderRef.current?.slickPrev()} />
-		),
+		prevArrow: <PrevButton onClick={() => sliderRef.current?.slickPrev()} />,
 		nextArrow: <NextButton onClick={() => sliderRef.current?.slickNext()} />,
-		responsive: [
-			{
-				breakpoint: 1536,
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '300px',
-				},
-			},
-			{
-				breakpoint: 1280,
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '250px',
-				},
-			},
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '200px',
-				},
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '100px',
-				},
-			},
-			{
-				breakpoint: 480, // For small devices
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '0px',
-				},
-			},
-		],
+		responsive: responsiveConsultingSlider,
 	};
 
 	return (

@@ -3,8 +3,8 @@
 import { Heading, Icon, NormalText, Overlay } from '@/components';
 import { useColors } from '@/hooks';
 import { zIndex } from '@/lib/config/constants';
-import { Box, Center, Image, Spinner } from '@chakra-ui/react'; // If you're using Chakra UI
-import { FC, useEffect, useRef, useState } from 'react';
+import { Box, Center, Image } from '@chakra-ui/react'; // If you're using Chakra UI
+import { FC, useRef } from 'react';
 import SlickSlider from 'react-slick';
 
 import 'slick-carousel/slick/slick-theme.css';
@@ -66,7 +66,6 @@ type SliderWithContentProps = {
 };
 
 const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
-	const [isLoading, setIsLoading] = useState(true);
 	const { colors } = useColors();
 	const sliderRef = useRef<SlickSlider | null>(null);
 	const valuesMap = Object.values(sliderData);
@@ -122,19 +121,6 @@ const SliderWithContent: FC<SliderWithContentProps> = ({ sliderData }) => {
 			},
 		],
 	};
-
-	useEffect(() => {
-		const timeout = setTimeout(() => setIsLoading(false), 1500); // Adjust time as needed
-		return () => clearTimeout(timeout);
-	}, []);
-
-	if (isLoading) {
-		return (
-			<Center minH='80vh'>
-				<Spinner color={colors?.white} size='xl' />;
-			</Center>
-		);
-	}
 
 	return (
 		<Box overflowX='hidden' h='full' w='full'>
