@@ -14,10 +14,14 @@ const Banner: FC<BannerProps> = ({ ...props }) => {
 					fontSize={{ base: '1.2rem', lg: '2.25rem', xl: '3rem' }}
 					fontWeight='600'
 					mb='1rem'
+					textAlign={'center'}
 				>
 					{pages?.vission?.name}
 				</Heading>
-				<NormalText fontSize={{ base: '1rem', lg: '1.2rem' }}>
+				<NormalText
+					fontSize={{ base: '1rem', lg: '1.2rem' }}
+					textAlign={'center'}
+				>
 					{pages?.vission?.description}
 				</NormalText>
 			</FlexColumn>

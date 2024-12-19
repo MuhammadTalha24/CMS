@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, Grid, GridProps } from '@chakra-ui/react';
+import { Box, Center, Grid, GridProps } from '@chakra-ui/react';
 import React, { FC } from 'react';
 import {
 	FlexColumn,
@@ -18,12 +18,14 @@ type IconSectionProps = GridProps & {
 const IconSection: FC<IconSectionProps> = ({ data, order, ...props }) => {
 	return (
 		<Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={12} {...props}>
-			<FlexImage
-				order={order ? 2 : 1}
-				image={data?.icon}
-				mb={{ base: 12, md: 0 }}
-				h={{ base: 'full', '2xl': '90%' }}
-			/>
+			<Center order={order ? 2 : 1}>
+				<FlexImage
+					image={data?.icon}
+					mb={{ base: 12, md: 0 }}
+					h={{ base: 'full', md: '90%', lg: '80%', xl: '70%', '2xl': '60%' }}
+				/>
+			</Center>
+
 			<FlexColumn order={order ? 1 : 2} justifyContent='center'>
 				<TextHeading>{data?.heading}</TextHeading>
 				<Heading fontWeight='700' fontSize={responsive?.smallTitle} py='1rem'>

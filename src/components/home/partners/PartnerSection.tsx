@@ -25,9 +25,9 @@ const PartnerSection: FC<PartnerSectionProps> = ({}) => {
 					{partnersSection?.description}
 				</NormalText>
 			</Box>
-			<Grid gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}>
+			<Grid gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={6}>
 				<PartnerCard data={partnersSection?.firstColumn} />
-				<Flex bg='red' w='full' h={{ base: 'auto', xl: '300px' }}>
+				<Flex w='full' h={{ base: 'auto', xl: '300px' }}>
 					<Image
 						w='full'
 						h='auto'
@@ -36,12 +36,7 @@ const PartnerSection: FC<PartnerSectionProps> = ({}) => {
 					/>
 				</Flex>
 				{partnersSection?.thirdTwoColumn?.map((item: any, i: number) => (
-					<PartnerCard
-						mr={i == 1 ? '0px' : { base: '0px', md: '1.75rem' }}
-						my='16px'
-						data={item}
-						key={i}
-					/>
+					<PartnerCard data={item} key={i} />
 				))}
 			</Grid>
 		</Box>
