@@ -1,5 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, BoxProps, Flex, Grid, GridProps } from '@chakra-ui/react';
+import {
+	Box,
+	BoxProps,
+	Center,
+	Flex,
+	Grid,
+	GridProps,
+	Text,
+	TextProps,
+} from '@chakra-ui/react';
 import React, { FC, ReactNode } from 'react';
 import { data } from '@/lib/config/data';
 import {
@@ -7,10 +16,10 @@ import {
 	FollowText,
 	FooterColumnLinks,
 	FooterLink,
-	NormalText,
 	SectionPadding,
 } from '@/components';
-import { useColors } from '@/hooks';
+import { useColors, usefont } from '@/hooks';
+import Link from 'next/link';
 const TEMPLATE_COLUMNS = {
 	base: '1fr',
 	md: '1fr 1fr',
@@ -25,6 +34,7 @@ type FooterProps = GridProps & {
 const Footer: FC<FooterProps> = ({ isHomePage }) => {
 	const { footer } = data;
 	const { colors } = useColors();
+	const copyright = footer?.copyright;
 	return (
 		<Box>
 			{isHomePage && (
@@ -55,9 +65,15 @@ const Footer: FC<FooterProps> = ({ isHomePage }) => {
 				</Grid>
 			</SectionWrapper>
 			<SectionWrapper>
-				<NormalText textAlign='center' py='1rem'>
-					{footer?.copyrightText}
-				</NormalText>
+				<Center gap={1}>
+					<CopyrightText fontSize={'.875rem'}>
+						{copyright?.leftText}
+						<Link href={copyright?.link} target='_blank'>
+							{copyright?.thinkText}
+						</Link>
+						{copyright?.rightText}
+					</CopyrightText>
+				</Center>
 			</SectionWrapper>
 		</Box>
 	);
@@ -78,5 +94,25 @@ const SectionWrapper = ({
 		>
 			{children}
 		</SectionPadding>
+	);
+};
+
+const CopyrightText = ({
+	children,
+	...props
+}: TextProps & { children: ReactNode }) => {
+	const { fonts } = usefont();
+	const { colors } = useColors();
+	return (
+		<Text
+			color={colors?.white}
+			fontWeight='400'
+			fontSize='1rem'
+			fontFamily={fonts?.OpenSans}
+			textAlign='center'
+			{...props}
+		>
+			{children}
+		</Text>
 	);
 };

@@ -616,7 +616,12 @@ export const data = {
 				link: 'https://www.twitter.com',
 			},
 		],
-		copyrightText: '© thinkcrypt.io All right reserved.',
+		copyright: {
+			leftText: 'powered by',
+			thinkText: 'thinkcrypt.io',
+			link: 'https://thinkcrypt.io',
+			rightText: '©2024-2025 | all right reserved',
+		},
 	},
 
 	pages: {
