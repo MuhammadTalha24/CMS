@@ -617,8 +617,8 @@ export const data = {
 			},
 		],
 		copyright: {
-			leftText: 'powered by',
-			thinkText: 'thinkcrypt.io',
+			leftText: 'powered by ',
+			thinkText: 'thinkcrypt.io ',
 			link: 'https://thinkcrypt.io',
 			rightText: '©2024-2025 | all right reserved',
 		},

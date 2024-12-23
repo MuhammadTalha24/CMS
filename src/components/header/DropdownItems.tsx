@@ -56,20 +56,18 @@ const DropdownItems: FC<DropdownItemsProps> = ({
 				zIndex={'11'}
 				transition='top 0.6s ease-out' // Smooth transition effect
 			>
-				<Link href={`/${item?.name.toLowerCase()}`}>
-					<Heading
-						fontSize='1.5rem'
-						fontWeight='600'
-						color={colors?.white}
-						px={{
-							base: padding.layoutPadding_X_Mobile,
-							lg: padding.layoutPadding_X,
-						}}
-						mb='1.5rem'
-					>
-						{`${item.name}`}
-					</Heading>
-				</Link>
+				<Heading
+					fontSize='1.5rem'
+					fontWeight='600'
+					color={colors?.white}
+					px={{
+						base: padding.layoutPadding_X_Mobile,
+						lg: padding.layoutPadding_X,
+					}}
+					mb='1.5rem'
+				>
+					{`${item.name}`}
+				</Heading>
 
 				<Box
 					style={{
